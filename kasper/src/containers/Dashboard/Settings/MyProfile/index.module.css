@@ -1,0 +1,200 @@
+.root {
+    height: 100%;
+    overflow-x: hidden;
+    background-color: #ffffff;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.container {
+    padding: 1rem 0rem 1rem 2rem;
+}
+
+.header {
+    font-family: "Playfair Display";
+    font-weight: bold;
+    font-size: 1.86rem;
+    font-style: normal;
+    color: #02122F;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 31px;
+}
+
+.grid {
+    height: 100%;
+}
+
+.formTitle {
+    font-family: "Playfair Display";
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #0D2145;
+    margin-bottom: 1rem;
+}
+
+.formFieldLabel {
+    font-family: "Montserrat";
+    font-weight: normal;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    color: #999999;
+    padding-bottom: 0.2rem;
+}
+
+.profileImagecontainer {
+    flex: 1;
+    display: flex;
+    padding-right: 2rem;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    text-align: center;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 140%;
+    text-align: center;
+    color: #02122F;
+    margin-top: 10px;
+}
+
+.uploadContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 26px;
+    border: 2px solid #D9E2F3;
+    border-radius: 8px;
+    background: rgba(231, 237, 246, 0.2);
+    padding: 4rem;
+}
+
+.uploadInstructions {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 140%;
+    margin-top: 10px;
+    color: #999999;
+    text-align: center;
+}
+
+.uploadContainer .highlight {
+    cursor: pointer;
+    color: #F4266E;
+}
+
+.hidden {
+    display: none;
+}
+
+.successfulUpload {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.successfulUpload .fileName {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.07rem !important;
+    line-height: 1.28rem;
+    color: #02122F !important;
+}
+
+.successfulUpload .fileUploaded {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.07rem;
+    line-height: 140%;
+    color: #999999;
+    margin-right: 45px;
+}
+
+.progressBarCheckbox {
+    display: flex;
+    align-items: center;
+}
+
+.progressBarCheckbox .checkbox {
+    margin-left: 20px;
+}
+
+.progressBarCheckbox .cancel {
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.avatarContainer {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.successMessage {
+    background: #E6EBF4;
+    border-radius: 4px;
+    padding: 0.5rem;
+    margin: 0.5rem 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Montserrat";
+    font-size: 1rem;
+    color: #02122F;
+}
+
+.successMessage .icon {
+    color: #1ABA17;
+    margin-right: 0.5rem;
+}
+
+.profileImageRootContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.profileImageAction {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 1rem;
+    display: flex;
+}
+
+.profileImageActionText {
+    cursor: pointer;
+    margin-left: 10px;
+    font-family: "Montserrat";
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.71rem;
+    letter-spacing: 0em;
+    color: #02122F;
+}
+
+.confirmationRoot {
+    display: flex;
+    flex-direction: column;
+}
+
+.confirmationSubtitle {
+    text-align: center;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 140%;
+    text-align: center;
+    color: #02122F;
+    margin-top: 10px;
+}

@@ -1,0 +1,350 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background: #F0F3F8;
+}
+
+body {
+  overflow: auto;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 242px;
+  width: 280px;
+  background: #F0F3F8;
+}
+
+.card_title {
+  margin-top: 20px;
+  height: 88px;
+  width: 100%;
+}
+
+.title {
+  font-family: Playfair Display;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 35px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.card_name_photo_block_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 12px;
+  background: #243656;
+  height: 242px;
+  width: 100%;
+  border-radius: 14px 14px 0 0;
+}
+
+.card_name_photo_block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 12px;
+  background: #243656;
+  height: 242px;
+  width: 100%;
+}
+
+.card_name_info_block_up_text {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #999999;
+}
+
+.card_name_photo_block_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  margin-left: 8px;
+  margin-top: 50px;
+  gap: 10px;
+}
+
+.card_name_photo_block_bottom_icon {
+  display: none;
+  height: 36px;
+  width: 27px;
+}
+
+.card_name_info_block_name {
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-top: 15px;
+  color: #FFFFFF;
+}
+
+.card_name_info_block_gray_text {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  margin-top: 12px;
+  text-align: left;
+  color: #999999;
+  text-transform: capitalize;
+}
+
+.card_photo {
+  display: flex;
+  margin-top: 40px;
+  height: 81px;
+  width: 81px;
+  border-radius: 50%;
+  border: 1px solid #E5E5E5;
+}
+
+.card_photo_banner {
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.card_name_info_block {
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+  min-height: 500px;
+  width: 100%;
+  border-radius: 0 0 14px 14px;
+  align-items: center;
+  position: relative;
+}
+
+.card_name_info_block_date {
+  margin-top: 65px;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  line-height: 19.5px;
+  text-align: center;
+}
+
+.card_name_info_block_birthday{
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0em;
+  text-align: right;
+  position: absolute;
+  top: 10px;
+  right: 42px;
+  color: #999999;
+}
+
+.card_name_info_block_time {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.card_name_info_block_text {
+  display: flex;
+  flex-direction: column;
+  width: 256px;
+  margin-top: 22px;
+  margin-left: 20px;
+}
+
+.card_name_info_block_text_gray {
+  height: 15px;
+  width: 238px;
+  left: 42px;
+  top: 467px;
+  text-align: left;
+  color: #999999;
+  text-transform: uppercase;
+}
+
+.card_name_info_block_text_procedures{
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-top: 3px;
+  margin-bottom: 20px;
+}
+
+.card_name_info_block_text_ul{
+  margin-top: 10px;
+  margin-bottom: 16px;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #02122F;
+  padding: 0;
+}
+
+.card_name_info_block_text_li {
+  list-style-type: none;
+}
+.card_name_info_block_no_allergic {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #999999;
+}
+
+.card_name_info_block_text_li_dot {
+  margin-left:  -8px;
+  margin-right:  -2px;
+  display: inline-block;
+}
+
+.card_name_info_block_text_notes {
+  margin-top: 3px;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+  width: 238px;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+}
+
+.card_logo {
+  display: flex;
+  margin-top: 30px;
+  height: 30px;
+  width: 112px;
+}
+
+.card_info_name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 160px;
+  margin-top: 5px;
+}
+
+.card_info_data {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 160px;
+  min-height: 50px;
+  margin-top: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .desktop {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .card_name_photo_block_bottom_icon {
+    display: flex;
+    height: 36px;
+    width: 27px;
+    margin-right: 196px;
+    margin-bottom: 25px;
+  }
+
+  .container {
+    overflow: auto;
+  }
+
+  .card_name_photo_block{
+    height: calc(100% - 23px);
+    width: 260px;
+    left: 275px;
+    border-radius: 14px 0 0 14px;
+    margin-top: 23px;
+  }
+
+  .card_name_photo_block_wrapper{
+    height: calc(100% - 23px);
+    width: 260px;
+    left: 275px;
+    border-radius: 14px 0 0 14px;
+    margin-top: 23px;
+  }
+
+  .card_name_info_block_date {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  .card_name_info_block_time {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  .card_name_info_block{
+    margin-top: 23px;
+    min-height: 542px;
+    width: 470px;
+    border-radius: 0 14px 14px 0;
+  }
+
+  .card_photo_banner {
+    right: 20px;
+  }
+
+  .card_name_info_block_birthday {
+    right: 62px;
+  }
+
+  .card_name_info_block_text {
+    width: 410px;
+  }
+
+  .card_name_info_block_text_notes{
+    width: 410px;
+  }
+
+  .card_logo {
+    display: none;
+  }
+
+  body {
+    overflow: hidden;
+  }
+}

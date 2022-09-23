@@ -1,0 +1,34 @@
+.root {
+    height: 100%;
+    overflow-x: hidden;
+    background-color: #ffffff;
+    padding: 1rem 2rem 0rem 2rem;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.header {
+    font-family: "Playfair Display";
+    font-weight: bold;
+    font-size: 1.86rem;
+    color: #02122F;
+}
+
+.sectionContainer {
+    margin: 2.49rem 0rem;
+}
+
+.sectionTitleContainer {
+    background: #F0F3F8;
+    box-sizing: border-box;
+    margin: -1rem -2rem 2.49rem -2rem;
+    padding: 0.78rem 0rem 0.78rem 2rem;
+}
+
+.sectionTitle {
+    font-family: "Playfair Display";
+    font-weight: bold;
+    line-height: 20px;
+    font-size: 1.07rem;
+}

@@ -1,0 +1,105 @@
+.root {
+  width: 100%;
+  height: 100%;
+}
+
+.paper {
+  width: 100%;
+  height: 100%;
+  border-radius: 0px !important;
+  margin-bottom: 2rem;
+}
+
+.hideSelectionColor {
+  background-color: transparent !important;
+}
+
+.table th {
+  font-weight: 500;
+  font-size: 1rem;
+  color: #02122f;
+  border-bottom: 2px solid #243656;
+}
+
+.table td {
+  font-weight: normal;
+  font-size: 1rem;
+  color: #02122f;
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0rem;
+  font-family: 'Montserrat';
+  font-size: 1rem;
+  color: #999999;
+}
+.searchBarWidth {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0rem;
+  font-family: 'Montserrat';
+  font-size: 1rem;
+  color: #999999;
+  width: 90%;
+}
+
+.emptyTextContainer {
+  color: #999999 !important;
+  font-size: 0.85rem !important;
+  min-height: 200px;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+.scrollbarVerticalTrack {
+  z-index: 2;
+  height: calc(100% - 55px); /* 55px is the table header height */
+  right: 2px;
+  bottom: 0px;
+  border-radius: 3px;
+}
+
+.filerIconContainer {
+  margin-left: 1rem;
+}
+
+.iconSpan {
+  display: flex;
+  flex-direction: column;
+  justify-content: Center;
+  align-items: Center;
+  margin-left: 3px;
+}
+
+.dropUpActive {
+  color: black;
+  margin-bottom: -13px;
+}
+
+.dropUpInActive {
+  color: rgb(188 188 188 / 0%);
+  margin-bottom: -13px;
+}
+
+.defaultDropUp {
+  margin-bottom: -13px;
+  color: #bcbcbc;
+}
+
+.defaultDropDown {
+  color: #bcbcbc;
+}
+
+.ascDropDown {
+  color: black;
+}
+
+.dropDownInActive {
+  color: rgb(188 188 188 / 0%);
+}

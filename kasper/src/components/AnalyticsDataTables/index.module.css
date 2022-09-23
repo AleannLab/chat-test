@@ -1,0 +1,45 @@
+.avatarInitials {
+    font-size: 0.85rem;
+}
+
+.avatarName {
+    display: flex;
+    align-items: center;
+}
+
+.name {
+    padding-left: 0.5rem
+}
+
+.container {
+    height: 420px;
+}
+
+.subTitle {
+    font-family: "Montserrat";
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.5em;
+    color: #02122F;
+    text-align: center;
+}
+
+.totalContainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0rem;
+}
+
+.totalContainer>.label {
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 1rem;
+    color: #999999;
+}
+
+.totalContainer>.value {
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 1.6rem;
+    color: #000000;
+}

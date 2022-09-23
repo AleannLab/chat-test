@@ -1,0 +1,129 @@
+.root {
+    background-color: #ffffff;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.container {
+    padding: 1rem 1rem 1rem 2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    font-family: "Playfair Display";
+    font-weight: bold;
+    font-size: 1.86rem;
+    font-style: normal;
+    color: #02122F;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 31px;
+}
+
+.formFieldLabel {
+    font-family: "Montserrat";
+    font-weight: normal;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    color: #999999;
+    padding-bottom: 0.2rem;
+}
+
+.practitionerAvatar {
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 1rem !important;
+    cursor: pointer;
+}
+
+.avatar {
+    border-radius: 50%;
+    border: 2px solid #D2D2D2;
+}
+
+.avatarName {
+    display: flex;
+    align-items: center;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 8px;
+}
+
+.name {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #02122F;
+}
+
+.phoneNo {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 0.85rem;
+    color: #02122F;
+}
+
+.description {
+    word-break: break-word;
+}
+
+.hidden {
+    display: none;
+}
+
+.avatarContainer {
+    position: relative !important;
+}
+
+.overlay {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    transition: .5s ease;
+    padding-left: 15px;
+    padding-top: 7px;
+    opacity: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 50%;
+}
+
+.overlayEmpty {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    transition: .5s ease;
+    padding: 15px;
+    opacity: 0;
+}
+
+.avatarContainer:hover .overlay {
+    opacity: 1 !important;
+    cursor: pointer;
+}
+
+.avatarContainer:hover .overlayEmpty {
+    opacity: 1 !important;
+    cursor: pointer;
+}
+
+.default {
+    display: inline-flex;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.71rem;
+    color: #02122F;
+    opacity: 0.6;
+    margin-top: 0.25rem;
+    align-items: center;
+}

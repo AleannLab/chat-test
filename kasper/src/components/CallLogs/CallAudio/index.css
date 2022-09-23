@@ -1,0 +1,70 @@
+.kasper-callaudio__root {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    /*justify-content: center;*/
+}
+
+.kasper-callaudio__root .toolbar {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0rem 0rem 1.5rem 0rem;
+}
+
+.kasper-callaudio__root .toolbar a {
+    text-decoration: none;
+}
+
+.kasper-callaudio__root .toolbar-btn span {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #02122F;
+    text-transform: none;
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: #fff;
+}
+
+audio::-webkit-media-controls-play-button {
+    background-color: #F4266E;
+    border-radius: 50%;
+}
+
+.voicemail-playback {
+    box-shadow: 0px 3px 5px rgba(200, 200, 200, 0.25) !important;
+    border-radius: 4px;
+}
+
+.voicemail-playback .rhap_progress-bar {
+    height: 2px;
+}
+
+.voicemail-playback .rhap_progress-indicator {
+    background-color: #566F9F !important;
+    width: 4px;
+    border-radius: 0px;
+    margin: 0px;
+}
+
+.voicemail-playback .rhap_stacked .rhap_controls-section {
+    display: flex;
+    margin-top: 0px;
+    flex: 0;
+}
+
+.voicemail-playback .rhap_main {
+    display: flex;
+    flex-direction: row-reverse;
+    flex: 1 1 auto;
+}
+
+.voicemail-playback .rhap_progress-filled {
+    background: linear-gradient(90deg, #432E88 15.28%, #F4266E 88.08%);
+}
+
+.voicemail-playback svg path {
+    fill: #F4266E;
+}

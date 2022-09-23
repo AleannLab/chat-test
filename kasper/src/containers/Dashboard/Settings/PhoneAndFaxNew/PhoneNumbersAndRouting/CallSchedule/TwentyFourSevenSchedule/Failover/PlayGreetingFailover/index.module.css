@@ -1,0 +1,11 @@
+.playPause {
+  font-size: 2.42rem !important;
+  color: #f4266e;
+  cursor: pointer;
+}
+.disabled {
+  font-size: 2.42rem !important;
+  color: #f993b7;
+  cursor: pointer;
+  pointer-events: none;
+}

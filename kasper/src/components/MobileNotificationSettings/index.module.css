@@ -1,0 +1,136 @@
+.container {
+    display: flex;
+    background-color: #F0F3F8;
+    flex-direction: column;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.contentContainer {
+    /* padding-left: 5px; */
+    /* padding-right: 5px; */
+    display: flex;
+    flex-direction: column;
+}
+
+.screenInfo {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.28rem;
+    line-height: 1.71rem;
+    text-align: center;
+    color: #02122F;
+    margin-top: 12px;
+    margin-bottom: 9px;
+}
+
+.appointmentQuestion {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 140%;
+    color: #02122F;
+    padding-top: 24px;
+}
+
+.key {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.21rem;
+    color: #02122F;
+}
+
+.keyCenter {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.21rem;
+    color: #02122F;
+    padding-left: 25rem;
+}
+
+.value {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.21rem;
+    color: #02122F;
+}
+
+.patientInfo {
+    padding-top: 12px;
+}
+
+.addNotification {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    border: none;
+    width: fit-content;
+    background: none;
+    padding: 0;
+}
+
+.addNotificationText {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.21rem;
+    color: #F4266E;
+    margin-bottom: 6px;
+}
+
+.notificationCard {
+    margin-top: 14px;
+}
+
+.upcomingAppointments {
+    margin-top: 24px;
+    margin-bottom: 15px;
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: bold;
+    align-self: flex-start;
+    font-size: 1.28rem;
+    line-height: 1.71rem;
+    text-align: center;
+    color: #02122F;
+}
+
+.appointmentCard {
+    margin-top: 14px;
+}
+
+.footerText {
+    margin-top: 20px;
+    margin-bottom: 24px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.857rem;
+    line-height: 160%;
+    color: #02122F;
+    opacity: 0.5;
+}
+
+.contactNo {
+    font-weight: 500;
+    color: #F4266E;
+}
+
+.noAppointments {
+    display: flex;
+    margin: 10px 0px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1rem;
+    color: #999999;
+}

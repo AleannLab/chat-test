@@ -1,0 +1,85 @@
+.root {
+    height: 100%;
+    overflow-x: hidden;
+    background-color: #ffffff;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 31px;
+}
+
+.titlesContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-family: "Playfair Display";
+    font-weight: bold;
+    font-size: 1.86rem;
+    font-style: normal;
+    color: #02122F;
+}
+
+.subtitle {
+    font-family: "Montserrat";
+    font-size: 1rem;
+    color: #02122F;
+    margin-top: 0.5rem;
+    align-items: center;
+}
+
+.setupContainer {
+    height: calc(100vh - 256px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.setupText {
+    font-family: "Montserrat";
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    text-align: center;
+    color: #999999;
+    margin-top: 1rem;
+}
+
+.headerButtons {
+    height: 30px;
+    width: 136px;
+}
+
+.tableContainer {
+    flex: 1;
+}
+
+.tableRoot {
+    height: calc(100vh - 64px);
+    overflow: hidden;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+.type {
+    font-family: "Montserrat";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.2rem;
+}
+
+.nameContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 8px;
+}

@@ -1,0 +1,78 @@
+.mentions {
+    width: 80%;
+    flex: 1;
+    position: absolute !important;
+    left: 50px;
+}
+
+.mentions--singleLine .mentions__control {
+    display: inline-block;
+    width: 130px;
+    background-color: #fff;
+    font-size: 14px;
+    font-weight: normal;
+    font-family: "Montserrat";
+}
+
+.mentions--singleLine .mentions__highlighter {
+    padding: 1px;
+    border: 2px inset transparent;
+
+}
+
+.mentions--singleLine .mentions__input {
+    padding: 1px;
+    border: 2px inset;
+}
+
+.mentions--multiLine .mentions__control {
+    background-color: #fff;
+    font-size: 1rem;
+    font-weight: normal;
+    font-family: "Montserrat";
+
+}
+
+.mentions--multiLine .mentions__highlighter {
+ border: 0 !important;
+}
+
+.mentions--multiLine .mentions__input {
+    border: 0;
+    outline: 0;
+    padding: 0;
+    border-radius: 4px;
+    
+}
+
+.mentions__mention {
+    /*position: relative and z-index:1 is necessary to render the tags above the text which is present in textarea*/
+    color: #ff5f94;
+    position: relative;
+    z-index: 1;
+}
+
+.tagContainer {
+    margin-top: 1rem;
+}
+
+.labelText {
+    font-family: "Montserrat";
+    font-size: 0.78rem;
+    font-weight: 400;
+    color: #999999;
+}
+
+.tag {
+    margin-right: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.tagContainer {
+    margin-top: 0.5rem;
+}
+
+.mentions__suggestions__item--focused {
+    background-color: #cee4e5;
+}

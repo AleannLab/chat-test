@@ -1,0 +1,55 @@
+.subTitleText {
+    font-family: "Montserrat";
+    font-size: 1rem;
+    text-align: center;
+    color: #02122F;
+    margin-bottom: 2rem;
+}
+
+.avatarName {
+    display: flex;
+    align-items: center;
+}
+
+.avatarInitials {
+    font-size: 0.85rem
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 8px;
+}
+
+.copylinkContainer {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.copyText {
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 0.64rem;
+    color: #F4266E;
+    margin-left: 10px;
+}
+
+.disabledText {
+    opacity: 0.5;
+}
+
+.searchBar {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0rem;
+    font-family: "Montserrat";
+    font-size: 1rem;
+    color: #999999;
+}
+
+.searchBar .inputBox{
+    flex: 1;
+}

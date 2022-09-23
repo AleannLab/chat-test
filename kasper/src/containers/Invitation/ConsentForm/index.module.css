@@ -1,0 +1,114 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px 0px 20px;
+    flex: 1
+}
+
+.greetUser {
+    font-family: "Playfair Display";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.57rem;
+    line-height: 3.42rem;
+    text-align: center;
+    color: #0D2145;
+}
+
+.info {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.42rem;
+    line-height: 160%;
+    text-align: center;
+    color: #02122F;
+    margin-top: 5px;
+}
+
+.encryption {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.85rem;
+    line-height: 160%;
+    text-align: center;
+    color: #999999;
+    margin-top: 5px;
+}
+
+.consentText {
+    margin-top: 100px;
+    font-family: "Playfair Display";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.42rem;
+    line-height: 1.92rem;
+    text-align: center;
+    color: #0D2145;
+}
+
+.popupLink {
+    color: #F4266E;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.agreeButton {
+    margin: 6rem auto 0rem auto;
+}
+
+.footerText {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.85rem;
+    line-height: 160%;
+    color: #02122F;
+    opacity: 0.5;
+}
+
+.divider {
+    margin-bottom: 20px;
+}
+
+.footerContent {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.email,
+.phone {
+    color: #F4266E;
+    text-decoration: none;
+}
+
+.email:hover,
+.phone:hover {
+    text-decoration: none;
+}
+
+.footer {
+    border-top: 1px solid #dddddd;
+    padding: 1rem 0rem;
+}
+
+@media only screen and (min-width: 992px) {
+    .container {
+        position: relative;
+        height: 100%;
+    }
+
+    .footer {
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .footer {
+        margin-top: 10rem;
+    }
+}

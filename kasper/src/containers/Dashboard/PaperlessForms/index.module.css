@@ -1,0 +1,55 @@
+.root {
+    height: 100%;
+    overflow: hidden;
+    background-color: #FFFFFF;
+}
+
+.paperlessFormSectionContainer {
+    border-width: 0px 1px 1px 0px;
+    border-style: solid;
+    border-color: #BBC1CD;
+    display: flex;
+    flex-direction: column;
+}
+
+.allSectionsContainer {
+    background-color: #F0F3F8;
+    border-width: 0px 1px 1px 0px;
+    border-style: solid;
+    border-color: #BBC1CD;
+    display: flex;
+    flex-direction: column;
+}
+
+.headerContainer {
+    font-family: "Playfair Display";
+    padding: 1rem 1.7rem;
+}
+
+.headerContainer .headerText {
+    font-weight: bold;
+    font-size: 1.86rem;
+    color: #02122F;
+    user-select: none;
+}
+
+.subHeaderContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.7rem;
+}
+
+.subHeaderText {
+    font-family: "Playfair Display";
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #0D2145;
+    user-select: none;
+}
+
+.previewContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: #F0F3F8;
+}

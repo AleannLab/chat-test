@@ -1,0 +1,38 @@
+.root {
+    height: 100%;
+    padding: 1rem;
+}
+
+.container {
+    display: flex;
+    min-height: 100%;
+}
+
+.cardButton {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.72rem;
+    cursor: pointer;
+}
+
+.readyButton {
+    margin-top: 5px;
+    color: #1ABA17;
+}
+
+.waitingForDoctor {
+    margin-top: 0.5rem;
+    color: yellow;
+}
+
+.cardButton:hover,
+.readyButton:hover {
+    filter: brightness(150%) !important;
+}
+
+.columnHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

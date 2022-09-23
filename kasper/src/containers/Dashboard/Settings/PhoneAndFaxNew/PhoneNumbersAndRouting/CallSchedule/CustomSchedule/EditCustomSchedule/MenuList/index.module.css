@@ -1,0 +1,31 @@
+.svgIcon svg {
+  left: 1px;
+  top: -4px;
+  margin-right: 1rem;
+}
+
+.svgIcon svg path {
+  fill: #9a9a9a;
+}
+.label {
+  height: 26px;
+  width: 145px;
+  left: 35px;
+  top: 5px;
+}
+
+.li:hover {
+  background-color: #d9e2f3;
+}
+.rotate {
+  transform: rotate(180deg);
+}
+
+.rotate svg {
+  margin-right: 0;
+  margin-left: 1rem;
+}
+.paper {
+  box-shadow: 0px 1px 18px rgba(30, 31, 35, 0.25);
+  border-radius: 3px;
+}

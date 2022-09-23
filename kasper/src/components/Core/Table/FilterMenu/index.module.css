@@ -1,0 +1,28 @@
+.root {
+    display: inline-flex;
+    z-index: 1;
+    font-family: "Montserrat";
+}
+
+.selectMenu {
+    cursor: pointer;
+    user-select: none;
+}
+
+.menuItem {
+    font-size: 0.85rem !important;
+    color: #02122F !important;
+}
+
+.menuItemIcon {
+    margin-right: 0.5rem;
+}
+
+.menuItemIcon svg {
+    height: 1rem;
+    width: 1rem;
+}
+
+.selectedMenuItem {
+    color: #F4266E !important;
+}

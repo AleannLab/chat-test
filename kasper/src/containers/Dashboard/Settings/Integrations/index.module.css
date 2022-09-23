@@ -1,0 +1,8 @@
+.root {
+  height: 100%;
+  overflow-x: hidden;
+  background-color: #ffffff;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,79 @@
+.subTitleText {
+    font-family: "Montserrat";
+    font-size: 1rem;
+    text-align: center;
+    color: #02122F;
+    margin-bottom: 2rem;
+}
+
+.avatarName {
+    display: flex;
+    align-items: center;
+}
+
+.avatarInitials {
+    font-size: 0.85rem
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 8px;
+}
+
+
+.disabledText {
+    opacity: 0.5;
+}
+
+.searchBar {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0rem;
+    font-family: "Montserrat";
+    font-size: 1rem;
+    color: #999999;
+}
+
+.searchBar .inputBox {
+    flex: 1;
+}
+
+.ofFormView {
+    cursor: pointer;
+    color: #999999;
+}
+
+.ofFormView:hover,
+.ofFormView:focus {
+    text-decoration: underline;
+}
+
+.menuItem {
+    font-size: 0.85rem !important;
+    color: #02122F !important;
+}
+
+.menuItemIcon {
+    margin-right: 0.5rem;
+}
+
+.menuItemIcon svg {
+    height: 1rem;
+    width: 1rem;
+}
+
+.modalFooterButtons {
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+}
+
+.modalFooterButtons div {
+    margin-left: 0px !important;
+}
+
+.HashformTable>div>div {
+    border-bottom: none !important;
+}

@@ -1,0 +1,35 @@
+.sentry-error-embed .powered-by {
+  display: none !important;
+}
+
+.sentry-error-embed .form-submit {
+  display: flex !important;
+  flex-direction: row-reverse !important;
+  justify-content: space-between !important;
+}
+
+.sentry-error-embed .form-submit::before,
+.sentry-error-embed .form-submit::after {
+  display: none !important;
+}
+
+.sentry-error-embed .form-submit button {
+  padding: 10px 15px !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  border-radius: 3px !important;
+}
+
+.sentry-error-embed .form-submit .btn {
+  color: #FFFFFF !important;
+  background: #F4266E !important;
+  border: 1px solid #F4266E !important;
+  margin-left: 1rem !important;
+}
+
+.sentry-error-embed .form-submit .close {
+  color: #02122F !important;
+  background: #FFFFFF !important;
+  border: 1px solid #F4266E !important;
+}

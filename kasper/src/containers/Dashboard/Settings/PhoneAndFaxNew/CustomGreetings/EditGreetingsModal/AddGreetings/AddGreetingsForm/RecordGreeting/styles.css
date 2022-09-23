@@ -1,0 +1,44 @@
+.rhap_container {
+  box-shadow: none;
+}
+
+.rhap_stacked .rhap_controls-section {
+  display: none;
+}
+
+.rhap_progress-filled {
+  background: linear-gradient(90deg, #432e88 15.28%, #f4266e 88.08%);
+}
+
+.rhap_progress-bar {
+  height: 2px;
+}
+
+.rhap_progress-indicator {
+  background-color: #566f9f !important;
+  width: 4px;
+  border-radius: 0px;
+  margin: 0px;
+}
+.custom-audio-player-controls {
+  width: auto;
+  padding: 0;
+}
+.custom-audio-player-controls,
+.custom-audio-player-controls .rhap_controls-section {
+  display: flex;
+}
+.custom-audio-player-controls .rhap_controls-section {
+  width: auto;
+  margin-top: 19px;
+}
+.custom-audio-player-controls .rhap_progress-section {
+  display: none;
+}
+.custom-audio-player-controls svg path {
+  fill: #f4266e;
+}
+.custom-audio-player-controls.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}

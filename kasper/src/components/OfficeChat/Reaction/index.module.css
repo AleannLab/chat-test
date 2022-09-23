@@ -1,0 +1,32 @@
+.reactionContent {
+  display: flex;
+  width: 40px;
+  height: 20px;
+  border-radius: 22px;
+  background-color: #F0F3F8;
+  align-items: center;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.reactionContentDisabled {
+  display: flex;
+  width: 40px;
+  height: 20px;
+  border-radius: 22px;
+  background-color: #F0F3F8;
+  align-items: center;
+  margin-left: 5px;
+  cursor: unset;
+}
+
+.reactionEmoji {
+  margin-left: 6px;
+}
+
+.reactionCount {
+  width: 13px;
+  height: 24px;
+  text-align: center;
+  padding: 4px 0 0 4px;
+}

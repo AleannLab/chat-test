@@ -1,0 +1,20 @@
+.lineItem {
+  height: 30px;
+  width: 128px;
+  background-color: #fff;
+  border-color: #d9e2f3 !important;
+}
+
+.selected {
+  border: 1px solid #566f9f !important;
+}
+
+.alignedToLeft {
+  margin-left: -1px;
+  border-radius: 0px 3px 3px 0px !important;
+}
+
+.alignedToRight {
+  margin-right: -1px;
+  border-radius: 3px 0px 0px 3px !important;
+}

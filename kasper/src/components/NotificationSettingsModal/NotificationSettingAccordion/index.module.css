@@ -1,0 +1,56 @@
+.text {
+  font-size: 14px;
+  line-height: 17px;
+  color: #02122F;
+  font-weight: 500;
+}
+
+.switch {
+  border-radius: 18px;
+}
+
+.arrow {
+  font-size: 14px;
+}
+
+.link {
+  color: #FFFFFF;
+}
+
+
+.radioWrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.radioColumn {
+  display: flex;
+  flex-direction: column;
+  margin-left: 29px;
+}
+
+.radioMargin {
+  margin: 0px;
+}
+
+.radioColumn1 {
+  display: flex;
+  flex-direction: column;
+  margin-left: 169px;
+}
+
+.label {
+  margin: 0px !important;
+}
+
+.formControlLabel {
+  font-weight: 500;
+}
+
+.remainingTime {
+  color: #a7a7a7;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}

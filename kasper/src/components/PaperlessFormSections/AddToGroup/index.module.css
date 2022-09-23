@@ -1,0 +1,21 @@
+.root {
+    margin-top: 2rem;
+    width: 300px;
+    max-height: 60vh;
+    overflow-y: scroll;
+}
+
+.group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.groupName {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.42rem;
+    color: #02122F;
+}

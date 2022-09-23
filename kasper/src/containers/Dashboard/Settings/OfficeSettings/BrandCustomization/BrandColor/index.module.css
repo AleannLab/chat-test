@@ -1,0 +1,22 @@
+.colorPicker {
+  width: 22rem !important;
+  box-shadow: none !important;
+}
+
+.colorPicker * {
+  font-size: 1rem !important;
+}
+
+.brandColorView {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid #bbc1cd;
+}
+
+.brandColorText {
+  color: #9a9a9a;
+  margin-top: 0.5rem;
+  text-transform: uppercase;
+}

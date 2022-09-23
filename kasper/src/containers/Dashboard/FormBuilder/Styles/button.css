@@ -1,0 +1,85 @@
+.formio .btn,
+.formio-form .btn,
+.formio-form .btn-primary,
+.formcomponent.btn,
+.formio-dialog .btn {
+    color: #FFFFFF !important;
+    background-color: #F4266E !important;
+    border: 1px solid #F4266E !important;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: none !important;
+    /* min-width: 10rem; */
+    box-shadow: none !important;
+    padding: 5px 5px;
+}
+
+.formio .btn:hover,
+.formio-form .btn:hover,
+.formio-form .btn:active,
+.formio-form .btn:focus,
+.formio-dialog .btn:hover {
+    color: #FFFFFF !important;
+    background-color: #D81B5D !important;
+    border-color: #D81B5D !important;
+    box-shadow: none !important;
+}
+
+
+.formio .btn.btn-secondary,
+.formio-form .btn.btn-secondary,
+.formio-form .btn.btn-secondary,
+.formcomponent.btn.btn-secondary,
+.formio-dialog .btn.btn-secondary {
+    background: #FFFFFF !important;
+    border: 1px solid #F4266E !important;
+    color: #02122F !important;
+}
+
+.formio .btn.btn-secondary:hover,
+.formio-form .btn.btn-secondary:hover,
+.formio-form .btn.btn-secondary:active,
+.formio-form .btn.btn-secondary:focus,
+.formcomponent.btn.btn-secondary:hover,
+.formio-dialog .btn.btn-secondary:active,
+.formio-dialog .btn.btn-secondary:focus {
+    border: 1px solid #D81B5D !important;
+    box-shadow: none !important;
+}
+
+.formio .component-settings-button {
+    min-width: auto !important;
+}
+
+.formio-dialog .btn.btn-secondary {
+    background: #FFFFFF !important;
+    border: 1px solid #F4266E !important;
+    color: #02122F !important;
+}
+
+.formio-dialog .btn.btn-secondary:hover,
+.formio-dialog .btn.btn-secondary:active,
+.formio-dialog .btn.btn-secondary:focus {
+    border: 1px solid #D81B5D !important;
+    box-shadow: none !important;
+}
+
+.formio-dialog-close.btn.btn-secondary {
+    border-width: 0px !important;
+    min-width: auto !important;
+}
+
+.formio-dialog-close.btn.btn-secondary:hover,
+.formio-dialog-close.btn.btn-secondary:active,
+.formio-dialog-close.btn.btn-secondary:focus {
+    border-width: 0px !important;
+    box-shadow: none !important;
+}
+
+.formio-dialog .btn.formio-dialog-close {
+    background: transparent !important;
+}
+
+.formio-form div[ref="buttonMessageContainer"].has-error {
+    display: none !important;
+}

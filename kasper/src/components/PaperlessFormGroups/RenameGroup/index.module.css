@@ -1,0 +1,12 @@
+.root {
+    padding-top: 2rem;
+}
+
+.formFieldLabel {
+    font-family: "Montserrat";
+    font-weight: normal;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    color: #999999;
+    padding-bottom: 0.2rem;
+}

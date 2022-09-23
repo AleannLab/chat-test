@@ -1,0 +1,30 @@
+.subTitleText {
+  font-family: "Montserrat";
+  font-size: 14px;
+  color: #02122F;
+  margin-bottom: 2rem;
+  margin-top: 15px;
+}
+.bodyText{
+  font-family: "Montserrat";
+  font-size: 14px;
+  color: #02122F;
+  margin-bottom: 2rem;
+}
+.bodyMargin {
+  margin-left: 87px;
+  margin-right: 88px;
+}
+.marginBottom{
+  margin-bottom: 2rem;
+}
+.dismiss{
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+.firstImage{
+  max-width: 334px;
+}
+.secondImage{
+  max-width: 465px;
+}

@@ -1,0 +1,27 @@
+.root {
+    height: calc(100vh - 64px);
+    overflow: hidden;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    font-family: "Playfair Display";
+    font-weight: bold;
+    font-size: 1.86rem;
+    font-style: normal;
+    color: #02122F;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 31px;
+}
+
+.headerButtons {
+    height: 30px;
+    width: 136px;
+}
+
+.tableContainer{
+    flex: 1;
+}

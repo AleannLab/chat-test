@@ -1,0 +1,29 @@
+.tasksContainer {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.completedTask {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: line-through;
+  color: #999999;
+}
+.taskItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.taskItem:hover {
+  cursor: pointer;
+}
+
+.taskItem:hover .taskName {
+  font-weight: 700;
+}
+
+.taskItem .taskName {
+  font-size: 1rem;
+}

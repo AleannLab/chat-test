@@ -1,0 +1,8 @@
+.tabBar {
+  position: absolute;
+  height: 49px;
+  width: 100%;
+  left: 0px;
+  background-color: #F0F3F8;
+  border-bottom: 1px solid #DDDDDD;
+}

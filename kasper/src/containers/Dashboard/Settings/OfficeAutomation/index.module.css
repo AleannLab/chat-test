@@ -1,0 +1,30 @@
+.root {
+    height: calc(100vh - 64px);
+    overflow: hidden;
+    background-color: #ffffff;
+    padding: 1rem 2rem 0rem 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.tableContainer {
+    flex: 1;
+}
+
+.header {
+    font-family: "Playfair Display";
+    font-weight: bold;
+    font-size: 1.86rem;
+    font-style: normal;
+    color: #02122F;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 31px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 8px;
+}

@@ -1,0 +1,46 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.messagePreview {
+  font-size: 1rem;
+  background: #F0F3F8;
+  min-height: 64px;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-top: 4px;
+  overflow-wrap: break-word;
+}
+
+.footer {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.labelText {
+  font-family: "Montserrat";
+  font-size: 11px;
+  font-weight: 400;
+  color: #999999;
+}
+
+.submittedText {
+  color: #9A9A9A;
+  margin-right: 1rem;
+}
+
+.show {
+  transition: opacity 0.5s;
+  opacity: 1;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.subText {
+  color: #9A9A9A;
+  font-size: 0.85rem;
+}

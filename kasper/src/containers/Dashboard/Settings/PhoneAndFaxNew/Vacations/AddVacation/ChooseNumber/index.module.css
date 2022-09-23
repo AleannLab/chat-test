@@ -1,0 +1,233 @@
+.root {
+  height: 100%;
+  overflow-x: hidden;
+  background-color: #ffffff;
+  padding: 1rem 2rem 0rem 2rem;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.header {
+  font-family: 'Playfair Display';
+  font-weight: bold;
+  font-size: 1.86rem;
+  color: #02122f;
+}
+
+.info {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  color: #02122f;
+  text-align: center;
+  padding: 1rem 0rem;
+}
+
+.timeZone {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.85rem;
+  color: #02122f;
+  opacity: 0.6;
+  margin-bottom: 25px;
+}
+
+.sectionContainer {
+  margin: 0rem 0rem 2.49rem 0rem;
+}
+
+.sectionTitle {
+  font-family: 'Playfair Display';
+  font-weight: bold;
+  line-height: 20px;
+  font-size: 1.07rem;
+}
+
+.headerButtons {
+  height: 30px;
+  width: 136px;
+}
+
+.tableContainer {
+  position: relative;
+  height: 400px;
+  margin-bottom: 30px;
+}
+
+.searchIcon {
+  color: '#999999';
+  height: '25px';
+  marginleft: '10px';
+}
+.searchIcon path {
+  fill: #999999 !important;
+}
+.searchInput {
+  display: flex;
+  align-items: center;
+  width: 90%;
+}
+.editButton {
+  width: 134.73px;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+
+  text-align: center;
+
+  /* secondary test */
+
+  color: #02122f;
+}
+.addButton {
+  font-size: 14px;
+  height: 30px;
+
+  /* Second */
+
+  background: #f4266e;
+  border-radius: 3px;
+}
+
+.sectionContainer {
+  margin: 2.49rem 0rem;
+}
+
+.sectionTitleContainer {
+  background: #f0f3f8;
+  box-sizing: border-box;
+  margin: -1rem -2rem 1.5rem -2rem;
+  padding: 0.78rem 0rem 0.78rem 2rem;
+}
+
+.sectionTitle {
+  font-family: 'Playfair Display';
+  font-weight: bold;
+  line-height: 20px;
+  font-size: 1.07rem;
+}
+
+.label {
+  word-break: break-all;
+}
+
+.select {
+  margin-right: 2.14rem !important;
+}
+
+.selected {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 1.5rem !important;
+}
+
+.selectedGlobal {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  margin-left: 1rem !important;
+}
+
+.awayGreetingItems {
+  display: flex;
+  flex-direction: column;
+}
+
+.awayGreetingSingleGreeting {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.awayGreetingActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* margin-left: 10px; */
+}
+
+.action {
+  cursor: pointer;
+  margin-left: 20px !important;
+}
+.action path {
+  fill: #9a9a9a;
+}
+.playPause {
+  font-size: 2.42rem !important;
+  color: #f4266e;
+  cursor: pointer;
+}
+
+.divider {
+  margin: 1rem 0rem 1rem 0rem !important;
+}
+
+.select {
+  margin-right: 2.14rem !important;
+}
+
+.selectDefault {
+  margin-right: 4.5rem !important;
+}
+
+.selected {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 3.75rem !important;
+}
+
+.selectedDefault {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 4.5rem !important;
+}
+
+.createNewGreetingButton {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.empty {
+  color: #999999;
+}
+
+.menuItem {
+  font-size: 0.85rem !important;
+  color: #02122f !important;
+}
+.greetingText {
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+
+  /* secondary test */
+  margin-left: 5px;
+  color: #02122f;
+}
+.number {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+
+  /* secondary test */
+
+  color: #02122f;
+}
+.numberDigit {
+  margin-left: 5px;
+}

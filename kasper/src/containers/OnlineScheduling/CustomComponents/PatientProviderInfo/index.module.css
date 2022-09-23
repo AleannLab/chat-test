@@ -1,0 +1,165 @@
+.container {
+    display: flex;
+    width: 100%;
+    padding: 18px;
+    flex-direction: column;
+    z-index: 2;
+}
+
+.selectionContainer {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0.78rem;
+}
+
+.label {
+    font-size: 0.78rem !important;
+}
+
+.toggleButton {
+    width: 100px !important;
+}
+
+.providerInfoContainer {
+    margin-top: 10px;
+}
+
+.providerInfoTitleContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding-left: 0.78rem;
+}
+
+.availableProviders {
+    font-family: "Playfair Display";
+    font-size: 1.28rem;
+    font-weight: 700;
+    line-height: 1.71rem;
+}
+
+.date {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.21rem;
+    color: #999999;
+}
+
+.noSelectionContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 250px;
+}
+
+.noSelectionText {
+    font-family: "Montserrat";
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.21rem;
+    color: #999999;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.select {
+    /* width: 20rem !important; */
+}
+
+.providerSelectionContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    /* margin-left: -1rem; */
+    /* grid-auto-rows: 100px; */
+}
+
+@media only screen and (max-width: 768px) {
+    .providerSelectionContainer {
+        display: initial;
+    }
+}
+
+/*Applies styles to all the children except first child*/
+.providerSelectionContainer> :not(:first-child) {
+    grid-row-end: span 2;
+    display: flex;
+    justify-content: center;
+}
+
+/*Applies styles only to first child*/
+.providerSelectionContainer> :first-child {
+    grid-row-end: span 1;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+/*Use masonry in case browser supports it. Currently Firefox supports it after enabling a flag*/
+@supports (grid-template-rows: masonry) {
+    .providerSelectionContainer {
+        display: grid;
+        gap: 17px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: masonry;
+    }
+
+    .providerSelectionContainer>* {
+        padding-bottom: 20px;
+        margin-bottom: 0;
+    }
+}
+
+.anyProviderContainer,
+.anyProviderDisabledContainer {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 260px;
+    height: 100px;
+    box-shadow: 0px 0.5px 2px rgb(30 31 35 / 15%);
+}
+
+.anyProviderContainer {
+    cursor: pointer;
+}
+
+.anyProviderDisabledContainer {
+    opacity: 0.5;
+}
+
+.anyProviderContainer:hover {
+    box-shadow: 0px 5px 8px rgba(30, 31, 35, 0.16);
+}
+
+.anyProvider {
+    font-family: "Montserrat";
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.21rem;
+    margin-top: 20px;
+    color: #02122F;
+}
+
+.selectButton {
+    font-family: "Montserrat";
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: #999999;
+    margin: 10px 0px;
+    border: none;
+}
+
+.selectedButton {
+    display: flex;
+    align-items: center;
+}
+
+.correctIcon {
+    margin-right: 5px;
+}

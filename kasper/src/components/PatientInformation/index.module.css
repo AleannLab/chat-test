@@ -1,0 +1,15 @@
+.fieldLabel {
+    padding-left: 1rem;
+    font-weight: bold;
+    font-size: 1rem;
+    font-family: "Montserrat";
+    color: #02122F;
+}
+
+.fieldValues {
+    font-size: 1rem;
+    font-family: "Montserrat";
+    padding-left: 3px;
+    font-weight: 500;
+    overflow-wrap: anywhere;
+}

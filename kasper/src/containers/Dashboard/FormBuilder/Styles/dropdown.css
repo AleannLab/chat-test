@@ -1,0 +1,16 @@
+.formio-form .formio-choices .choices__list--dropdown {
+    z-index: 1001 !important;
+    margin: 4px 0px !important;
+    background: white !;
+    border: 1px solid #D1D1D1 !important;
+    border-radius: 4px !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2) !important;
+}
+
+.formio-form .formio-choices .choices__list--dropdown .choices__item {
+    padding: 0.5rem 1rem !important;
+}
+
+.formio-form .formio-choices .choices__list--dropdown .choices__item--selectable.is-highlighted {
+    background-color: #D9E2F3 !important;
+}

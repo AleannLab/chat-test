@@ -1,0 +1,102 @@
+.formName {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 140%;
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.formNameContainerUnselected {
+    margin-bottom: 20px;
+    width: 180px;
+    display: flex;
+    align-content: center;
+    padding-top: 6px;
+    padding-left: 1px;
+}
+
+.formNameContainerSelected {
+    background: #E7EDF7;
+    border: 1px solid #D9E2F3;
+    border-radius: 4px;
+    margin-bottom: 14px;
+    width: 180px;
+    display: flex;
+    align-content: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.checkboxLabel {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.28rem;
+    line-height: 1.71rem;
+    color: #0D2145;
+}
+
+.key {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.21rem;
+    color: #02122F;
+    margin-bottom: 14px;
+}
+
+.signatureContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.signature {
+    width: 50%;
+    height: 50px;
+}
+
+.value {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.21rem;
+    color: #02122F;
+    word-break: break-word;
+}
+
+.updated {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.21rem;
+    color: #999999;
+}
+
+.emptyForms {
+    margin-top: 100px;
+    margin-right: auto;
+    margin-left: auto;
+    opacity: 0.5;
+    font-size: 1.2rem;
+}
+
+.emptyFormNames {
+    margin-top: 85px;
+    margin-right: 85px;
+    margin-left: auto;
+    opacity: 0.5;
+    font-size: 1.2rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.noData {
+    color: #999999;
+}

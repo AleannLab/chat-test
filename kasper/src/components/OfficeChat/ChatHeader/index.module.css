@@ -1,0 +1,87 @@
+.titleContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px 12px;
+  border-bottom: 1px solid #BBC1CD;
+  height: 59px;
+}
+
+.otherContainer {
+  display: flex;
+  gap: 9px;
+}
+
+.infoOther {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.otherName {
+  font-family: 'Playfair Display';
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 19px;
+  color: #02122F;
+  margin: 0;
+}
+
+.otherIsOnline {
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+  color: #999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.otherOnline::before,
+.otherOffline::before {
+  content: '';
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  margin-bottom: 2px;
+}
+
+.otherOnline::before {
+  background-color: #3BAA53;
+}
+
+.otherOffline::before {
+  background-color: #b64b43;
+}
+
+.searchBoxIcon {
+  color: #9A9A9A;
+  font-size: 1.2rem !important;
+}
+
+.iconButton {
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.iconButton:hover {
+  background-color: transparent;
+}
+
+.searchBoxContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 7px;
+}

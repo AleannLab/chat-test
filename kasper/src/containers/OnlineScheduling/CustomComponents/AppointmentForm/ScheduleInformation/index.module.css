@@ -1,0 +1,58 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    align-items: flex-start;
+}
+
+.backContainer {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.backText {
+    font-family: "Playfair Display";
+    font-size: 1.14rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.scheduleInformationContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.scheduleInformation {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.scheduleInformationDoctor {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    margin-left: 5px;
+}
+
+.text {
+    font-family: "Montserrat";
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    color: #02122F;
+    margin-left: 10px;
+    overflow-wrap: anywhere;
+}
+
+.offset {
+    font-family: "Montserrat";
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    color: #999999;
+}

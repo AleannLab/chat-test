@@ -1,0 +1,15 @@
+.faxSent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkBox {
+    width: 14px;
+    height: 14px;
+    margin-right: 5px;
+}
+
+.recipient {
+    font-weight: bold;
+}

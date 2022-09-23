@@ -1,0 +1,30 @@
+.container {
+  width: 17rem;
+  height: 5.7rem;
+  padding: 11px 16px 12px 10px;
+}
+
+.container > * {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.2rem 0;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-style: normal;
+  line-height: 15px;
+  letter-spacing: 0em;
+}
+
+.container > * > strong {
+  font-weight: 600;
+  text-align: left;
+}
+
+.container > *:last-child {
+    color: #F4266E;
+}
+
+.container > * > span {
+  font-weight: 400;
+  text-align: right;
+}

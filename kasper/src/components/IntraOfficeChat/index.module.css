@@ -1,0 +1,97 @@
+.chatContainer {
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+    height: calc(100vh - 64px);
+    background: #ffffff;
+}
+
+.chatListContainer {
+    height: 100%;
+    display: flex;
+    flex: 1;
+}
+
+.chatList {
+    padding: 10px 20px;
+}
+
+.titleContainer {
+    border-bottom: 1px solid #BBC1CD;
+    display: flex;
+    align-items: center;
+    padding: 6px 20px;
+}
+
+.titleText {
+    font-weight: bolder;
+    font-size: 1.5rem;
+    font-family: "Playfair Display";
+    color: #0D2145;
+    padding-left: 11px;
+}
+
+.userAvatar {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 1rem !important;
+}
+
+.skeletonRoot .leftMessage {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    margin: 2rem 0rem;
+}
+
+.skeletonRoot .leftMessage .message {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 1rem;
+    margin: 0rem 1rem;
+    background: #F5DBE5;
+    border-radius: 10px 10px 10px 0px;
+}
+
+.skeletonRoot .rightMessage {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin: 2rem 0rem;
+}
+
+.skeletonRoot .rightMessage .message {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 1rem 1rem;
+    margin: 0rem 1rem;
+    background: #D9E2F3;
+    border-radius: 10px 10px 0px 10px;
+}
+
+.chatSendingIndicator {
+    height: 0.8rem !important;
+    width: 0.8rem !important;
+    margin-left: 0.5rem;
+}
+
+.chatSendingIndicator svg {
+    height: 0.8rem !important;
+    width: 0.8rem;
+}
+
+.noMessageText {
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 1rem;
+    color: #02122F;
+    opacity: 0.5;
+}

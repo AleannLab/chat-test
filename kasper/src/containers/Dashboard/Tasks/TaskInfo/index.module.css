@@ -1,0 +1,118 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.headerContainer {
+    font-family: "Playfair Display";
+    padding: 1rem 1.7rem;
+}
+
+.headerContainer .headerText {
+    font-weight: bold;
+    font-size: 1.86rem;
+    color: #02122F;
+}
+
+.taskAction {
+    display: flex;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.21rem;
+    color: #BBC1CD;
+    align-content: center;
+    margin-top: 40px;
+}
+
+.taskActionIcon {
+    font-size: 2rem;
+    margin-right: 5px;
+}
+
+.taskActionsContainer {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 34px;
+}
+
+.contentContainer {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+.highlightedText {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.7rem;
+    color: #F4266E;
+    margin-right: auto;
+    flex: 1;
+}
+
+.greyedText {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.7rem;
+    color: #858585;
+}
+
+.taskDate {
+    border-radius: 4px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.8rem !important;
+    color: #243656;
+    display: flex;
+}
+
+.taskInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.taskSubheader {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.dateIcon {
+    margin: 0px 4px;
+    font-size: 1rem !important;
+}
+
+.checkBoxContainer {
+    display: flex;
+    margin-top: 25px;
+    align-content: center;
+    margin-bottom: 25px;
+}
+
+.checkBox {
+    color: #02122F !important;
+    padding: 2px 4px 0px 0px !important;
+}
+
+.taskLabel {
+    display: flex;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.42rem;
+    color: #02122F;
+    margin-left: 12px;
+}
+
+.taskCompletedLabel {
+    opacity: 0.5;
+    text-decoration: line-through;
+}

@@ -1,0 +1,65 @@
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+.fieldLabel {
+    color: #999999;
+    font-size: 0.8rem;
+    font-style: normal;
+    font-family: 'Montserrat';
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+}
+
+.fieldValue {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 17px;
+    color: #02122F;
+    margin-top: 0.5rem;
+}
+
+.avatar {
+    border-radius: 50%;
+    border: 2px solid #D2D2D2;
+}
+
+.actionContainer {
+    display: flex;
+    font-family: "Montserrat";
+    font-weight: normal;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #02122F;
+    margin-top: 0.25rem;
+    cursor: pointer;
+    padding: 0.2rem 0.35rem;
+}
+
+.avatarButtonIcon {
+    margin-right: 0.71rem;
+}
+
+.avatarButtonIcon>path {
+    fill: #9A9A9A;
+}
+
+.label {
+    margin: 0;
+    padding: 0;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3rem;
+}

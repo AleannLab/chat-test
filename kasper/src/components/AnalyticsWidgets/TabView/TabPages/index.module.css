@@ -1,0 +1,42 @@
+.pageTitle {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.28rem;
+    color: #0D2145;
+}
+
+.pageSubTitle {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    color: #02122F;
+}
+
+.dateField {
+    font-family: 'Montserrat';
+    font-size: 1rem;
+    color: #717171;
+}
+
+.shortDetails {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 2rem;
+    color: #02122F;
+}
+
+.suggestionLabel {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 1rem;
+    color: #F4266E;
+}
+
+.suggestionValue {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 14px;
+    color: #02122F;
+}

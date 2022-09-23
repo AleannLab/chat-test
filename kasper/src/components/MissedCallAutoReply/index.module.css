@@ -1,0 +1,25 @@
+.container {
+  border: 1px solid #d2d2d2;
+  border-radius: 4px;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  margin-bottom: 0.25em;
+  color: #0D2145
+}
+
+.headerSubtitle {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  margin-top: 2em;
+  color: #02122F
+}

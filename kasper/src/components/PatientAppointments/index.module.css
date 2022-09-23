@@ -1,0 +1,10 @@
+.loaderItem {
+    border: 1px solid #D2D2D2;
+    margin-top: 10px;
+    width: 100%;
+    padding: 4px;
+    display: flex;
+    background: transparent;
+    border-radius: 3px;
+    box-shadow: none;
+}

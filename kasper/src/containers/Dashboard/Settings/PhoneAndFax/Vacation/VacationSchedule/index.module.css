@@ -1,0 +1,65 @@
+.awayGreetingSingleGreeting {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.createNewGreetingButton {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.empty {
+    color: #999999;
+}
+
+.label {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px !important;
+    line-height: 13px;
+    text-transform: uppercase;
+    color: #999999;
+}
+
+.divider {
+    margin-top: 20px !important;
+}
+
+.formActions {
+    display: flex !important;
+    align-self: flex-end;
+    margin-top: 20px;
+}
+
+.schedulesContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.schedule {
+    font-weight: 600;
+}
+
+.playPause {
+    font-size: 3rem !important;
+    color: #F4266E;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.sectionTitleContainer {
+    background: #F0F3F8;
+    box-sizing: border-box;
+    margin: 2.49rem -2rem 2.49rem -2rem;
+    padding: 0.78rem 0rem 0.78rem 2rem;
+}
+
+.sectionTitle {
+    font-family: "Playfair Display";
+    font-weight: bold;
+    line-height: 20px;
+    font-size: 1.07rem;
+}

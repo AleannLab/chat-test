@@ -1,0 +1,20 @@
+.header {
+  font-family: 'Playfair Display';
+  font-weight: bold;
+  font-size: 1.86rem;
+  font-style: normal;
+  color: #02122f;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.headerButtons {
+  height: 30px;
+  width: 136px;
+}
+
+.tableContainer {
+  position: relative;
+  height: 100%;
+}

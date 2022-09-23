@@ -1,0 +1,117 @@
+.header {
+  height: 47px;
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  color: #02122f;
+  padding-right: 1em;
+  border-bottom: 1px solid #dddddd;
+}
+
+.arrowButtonsContainer {
+  display: flex;
+  flex-direction: column;
+  width: 25px;
+  height: 100%;
+  border-right: 1px solid #dddddd;
+}
+
+.buttonsContainer {
+  height: 100%;
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkIcon {
+  color: #f4266e;
+}
+
+.chipActive {
+  padding: 0 1em;
+  text-transform: uppercase;
+  background: #f8e8ef;
+  border-radius: 10px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 8px;
+  color: #f4266e;
+}
+.chipDisabled {
+  padding: 0 1em;
+  text-transform: uppercase;
+  background: #f0f3f8;
+  border-radius: 10px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 8px;
+  color: #bcbcbc;
+}
+
+.editScheduleContainer {
+  margin-top: 18px;
+  background: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 4px 4px 0px 0px;
+}
+
+.addButton {
+  width: 100%;
+  border: 2px dashed #d9e2f3;
+  border-radius: 4px;
+  min-height: 40px;
+  font-family: 'Montserrat';
+  font-weight: 500;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  color: #999999;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0 0.5em 1em 0.5em;
+}
+
+.scheduleItem {
+  position: relative;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 4px;
+  height: 40px;
+  font-family: 'Montserrat';
+  font-weight: 500;
+  font-size: 11px;
+  color: #ffffff;
+}
+
+.closeIcon {
+  font-size: 14px;
+  color: #fff;
+  opacity: 0.5;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  cursor: pointer;
+}
+
+.editIcon {
+  opacity: 0.5;
+  position: absolute;
+  bottom: 6px;
+  right: 4px;
+  cursor: pointer;
+}

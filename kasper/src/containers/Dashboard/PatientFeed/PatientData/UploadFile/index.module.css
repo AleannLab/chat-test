@@ -1,0 +1,111 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.subtitle {
+    text-align: center;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 140%;
+    text-align: center;
+    color: #02122F;
+    margin-top: 10px;
+}
+
+.uploadContainerEmpty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 26px;
+    width: 500px;
+    height: 102px;
+    border: 2px dashed #D9E2F3;
+    border-radius: 8px;
+}
+
+.uploadContainerFilled {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 26px;
+    width: 500px;
+    height: 102px;
+    border: 2px solid #D9E2F3;
+    background: rgba(231, 237, 246, 0.2);
+    border-radius: 8px;
+}
+
+.uploadInstructions {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 140%;
+    margin-top: 10px;
+    color: #999999;
+}
+
+.uploadContainerEmpty .highlight {
+    cursor: pointer;
+    color: #F4266E;
+}
+
+.hidden {
+    display: none;
+}
+
+.successfulUpload {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.successfulUpload .fileName {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.07rem !important;
+    line-height: 1.28rem;
+    color: #02122F !important;
+}
+
+.successfulUpload .fileUploaded {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.07rem;
+    line-height: 140%;
+    color: #999999;
+    margin-right: 45px;
+}
+
+.progressBarCheckbox {
+    display: flex;
+    align-items: center;
+}
+
+.progressBarCheckbox .checkbox {
+    margin-left: 20px;
+}
+
+.progressBarCheckbox .cancel {
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.formFieldLabel {
+    font-family: "Montserrat";
+    font-weight: normal;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    color: #999999;
+    padding-bottom: 0.2rem;
+}

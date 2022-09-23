@@ -1,0 +1,46 @@
+.root {
+    display: flex;
+    flex-direction: column;
+    background-color: #243656;
+}
+
+.pageBody {
+    flex: 1;
+    background-color: #F0F3F8;
+}
+
+.formContainer {
+    background-color: #FFFFFF !important;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.formContainer .body .formWrapper {
+    padding: 0rem 3rem;
+    height: 100%;
+}
+
+.formContainer .body .info {
+    font-family: "Montserrat";
+    font-size: 1.22rem;
+    color: #02122F;
+    padding-top: 2rem;
+}
+
+.formContainer .body .subInfo {
+    font-family: "Montserrat";
+    font-size: 0.85rem;
+    color: #999999;
+    padding-top: 1rem;
+}

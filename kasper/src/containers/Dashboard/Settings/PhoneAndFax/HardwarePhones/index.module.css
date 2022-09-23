@@ -1,0 +1,100 @@
+.root {
+    height: 100%;
+    overflow-x: hidden;
+    background-color: #ffffff;
+    padding: 1rem 2rem 0rem 2rem;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.header {
+    font-family: "Playfair Display";
+    font-weight: bold;
+    font-size: 1.86rem;
+    color: #02122F;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.labelStatusContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.valueActive {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.21rem;
+    color: #02122F;
+}
+
+.valueInactive {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.21rem;
+    color: #9A9A9A;
+}
+
+.passwordActive {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.21rem;
+    color: #02122F;
+}
+
+.passwordInactive {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.21rem;
+    color: #9A9A9A;
+}
+
+.labelStatus {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.71rem;
+    line-height: 0.85rem;
+    color: #9A9A9A;
+    margin-top: 2px;
+}
+
+.copyIcon {
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.passwordContainer {
+    display: flex;
+}
+
+.moreIcon {
+    color: #9A9A9A;
+    cursor: pointer;
+}
+
+.menuItem {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.85rem;
+    line-height: 170%;
+    color: #02122F;
+}
+
+.tableProgressBar {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    z-index: 10;
+}

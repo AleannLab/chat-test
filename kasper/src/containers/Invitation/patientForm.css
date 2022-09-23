@@ -1,0 +1,68 @@
+/* Override Material-UI's component style here*/
+
+.kasper-stepper-root .MuiStepIcon-text {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.85rem;
+    color: #FFFFFF;
+}
+
+.kasper-stepper-root .MuiStepIcon-active {
+    color: #432E88 !important;
+}
+
+.kasper-stepper-root .MuiStepIcon-completed {
+    color: #1ABA17 !important;
+}
+
+.kasper-stepper-root .MuiStepConnector-vertical {
+    margin-left: 10px;
+    padding: 0.5rem 0rem;
+}
+
+.kasper-stepper-root .MuiStepLabel-root.Mui-disabled {
+    opacity: 0.5 !important;
+}
+
+.kasper-stepper-root .res-page-section {
+    flex-wrap: nowrap;
+    position: relative;
+}
+
+@media only screen and (min-width: 1100px) {
+    .kasper-stepper-root .res-page-section {
+        width: 1100px !important;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .kasper-stepper-drawer .MuiPaper-root {
+        width: 75% !important;
+    }
+
+    .kasper-stepper-drawer .MuiStepIcon-text {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.85rem;
+        color: #FFFFFF;
+    }
+
+    .kasper-stepper-drawer .MuiStepIcon-active {
+        color: #432E88 !important;
+    }
+
+    .kasper-stepper-drawer .MuiStepIcon-completed {
+        color: #1ABA17 !important;
+    }
+
+    .kasper-stepper-drawer .MuiStepConnector-vertical {
+        margin-left: 10px;
+        padding: 0.5rem 0rem;
+    }
+
+    .kasper-stepper-drawer .MuiStepLabel-root.Mui-disabled {
+        opacity: 0.5 !important;
+    }
+}

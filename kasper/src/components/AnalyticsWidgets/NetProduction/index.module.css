@@ -1,0 +1,67 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 355px;
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0.5px 7px rgba(30, 31, 35, 0.08);
+}
+
+.title {
+    font-family: "Montserrat";
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.2rem;
+    color: #000000;
+}
+
+.amountDaysContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 1rem 0rem;
+}
+
+.amount {
+    font-family: "Montserrat";
+    font-size: 1.7rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2rem;
+}
+
+.days {
+    font-family: "Montserrat";
+    font-size: 0.85rem;
+    font-style: normal;
+    font-weight: 400;
+    margin-left: 0.5rem;
+    color: #999999;
+}
+
+.chartContainer {
+    display: flex;
+    align-items: center;
+}
+
+.legend {
+    display: flex;
+    flex-direction: column;
+}
+
+.legendName {
+    font-family: "Montserrat";
+    font-size: 0.85rem;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.bar {
+    fill: #5B8DE8;
+}
+
+.highlightedBar {
+    fill: #F4266E;
+}

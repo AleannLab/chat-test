@@ -1,0 +1,15 @@
+.root {
+    font-family: 'Montserrat';
+    font-size: 0.85rem;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.positive {
+    color: #1ABA17;
+}
+
+.negative {
+    color: #F4266E;
+}

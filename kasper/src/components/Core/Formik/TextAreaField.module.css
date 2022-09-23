@@ -1,0 +1,16 @@
+.textareaCustom,
+.textareaCustomResize {
+    width: 100%;
+    padding: 10px 12px !important;
+    font-family: 'Montserrat';
+    font-size: 13px;
+    background: #FFFFFF;
+    border: 1px solid #D2D2D2;
+    box-sizing: border-box;
+    border-radius: 4px;
+    color: #02122F;
+}
+
+.textareaCustomResize {
+    resize: vertical !important;
+}

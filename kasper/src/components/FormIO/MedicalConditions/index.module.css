@@ -1,0 +1,74 @@
+.gridContainer {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  padding: 4px;
+}
+
+.gridItem {
+  padding: 2px;
+}
+
+.label {
+  font-family: 'Montserrat';
+  font-size: 0.8rem !important;
+  word-break: break-word;
+}
+
+.searchContainer {
+  display: flex;
+  border: 1px solid #ced4da;
+}
+
+.searchContainer:focus {
+  box-shadow: rgb(25 118 210 / 25%) 0 0 0 0.2rem;
+  border-color: #1976d2;
+}
+
+.inputField input {
+  margin-top: -5px;
+}
+
+.formButton {
+  padding: 6px;
+  font-size: 1rem;
+  background: #f4266e !important;
+  border: 1px solid #f4266e !important;
+  color: #ffffff !important;
+  border-radius: 4px;
+  min-width: 120px;
+}
+
+.formButton:disabled {
+  background: #fa93b7 !important;
+  border: 1px solid #fa93b7 !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .gridContainer {
+    grid-template-columns: 33% 33% 33%;
+    padding: 2px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .gridContainer {
+    grid-template-columns: 50% 50%;
+    padding: 2px;
+  }
+}
+
+.printOnly {
+  display: none !important;
+}
+
+@media print {
+  .noPrint {
+    display: none !important;
+  }
+
+  .printOnly {
+    display: block !important;
+    font-family: 'Montserrat';
+    font-size: 1rem !important;
+  }
+}

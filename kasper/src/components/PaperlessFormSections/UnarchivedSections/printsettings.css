@@ -1,0 +1,23 @@
+@media print {
+    button[name="data[container][submit]"] {
+        page-break-after: always;
+        visibility: hidden;
+    }
+    button[name="data[container][form$submit]"] {
+        page-break-after: always;
+        visibility: hidden;
+    }
+    button[name="data[continue]"] {
+        page-break-after: always;
+        visibility: hidden;
+    }
+    button[name="data[submit]"] {
+        page-break-after: always;
+        visibility: hidden;
+    }
+}
+
+@page {
+    size: auto;
+    margin: 3mm 10mm;
+}

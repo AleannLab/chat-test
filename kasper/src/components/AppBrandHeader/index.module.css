@@ -1,0 +1,30 @@
+.appBar {
+  position: relative !important;
+  height: auto !important;
+  display: flex !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  margin-bottom: 10rem !important;
+}
+
+.coverImage {
+  position: relative !important;
+  width: 100% !important;
+  max-width: 1280px !important;
+  align-self: center !important;
+}
+
+.profileImage {
+  position: absolute !important;
+  height: 100% !important;
+  border: 1px solid #f0f3f8 !important;
+  left: 50% !important;
+  top: 100% !important;
+  transform: translate(-50%, -50%) !important;
+}
+
+@media only screen and (min-width: 768px) {
+  .appBar {
+    margin-bottom: 8rem;
+  }
+}
