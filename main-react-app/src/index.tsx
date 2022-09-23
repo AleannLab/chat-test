@@ -40,5 +40,5 @@ registerMicroApps([
   },
 ]);
 
-setDefaultMountApp("/micro-react2");
+setDefaultMountApp("/micro-react1");
 start();

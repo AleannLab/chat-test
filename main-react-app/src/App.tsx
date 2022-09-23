@@ -19,6 +19,7 @@ function App() {
       </header>
       <h1>{count1}</h1>
       <h2>{count2}</h2>
+      <p className={"text"}>text-app</p>
       <div id="subapp-viewport"></div>
     </div>
   );
