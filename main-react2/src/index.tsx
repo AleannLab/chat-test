@@ -1,31 +1,33 @@
 import "./public-path";
 import React from "react";
-import ReactDOM from "react-dom/client";
+import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 
-function root(props: any) {
+function render(props: any) {
   const { container } = props;
-  const root = ReactDOM.createRoot(
+  ReactDOM.render(
+    <App />,
     container
       ? container.querySelector("#root")
       : document.querySelector("#root")
   );
-  return root;
 }
 
 export async function bootstrap() {
-  console.log("react app bootstraped");
+  console.log("[react16] react app bootstraped");
 }
 
-export async function mount(props: any) {
-  root(props).render(<App />);
+export async function mount(props: any ) {
+  console.log("[react16] props from main framework", props);
+  render(props);
 }
 
 export async function unmount(props: any) {
-  root(props).unmount();
-}
-
-export async function update(props: any) {
-  console.log("update props", props);
+  const { container } = props;
+  ReactDOM.unmountComponentAtNode(
+    container
+      ? container.querySelector("#root")
+      : document.querySelector("#root")
+  );
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
+import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import { registerMicroApps, start, setDefaultMountApp } from "qiankun";
@@ -7,21 +7,15 @@ import { store } from "./state";
 import "./index.css";
 import App from "./App";
 
-let container: any = null;
+ReactDOM.render(
+  <BrowserRouter>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </BrowserRouter>,
 
-document.addEventListener("DOMContentLoaded", function () {
-  if (!container) {
-    container = document.getElementById("root") as HTMLElement;
-    const root = ReactDOM.createRoot(container);
-    root.render(
-      <Provider store={store}>
-        <BrowserRouter>
-          <App />
-        </BrowserRouter>
-      </Provider>
-    );
-  }
-});
+  document.getElementById("root")
+);
 
 registerMicroApps([
   {
