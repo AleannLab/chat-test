@@ -1,8 +1,0 @@
-.wrapperChat {
-  display: flex;
-  gap: 5px;
-  flex-direction: column-reverse;
-  padding: 0px 12px 35px 16px;
-  max-width: 360px;
-  width: 100%;
-}
