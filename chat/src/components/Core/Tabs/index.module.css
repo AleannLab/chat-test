@@ -1,0 +1,57 @@
+.root {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  overflow: auto;
+}
+
+.tabs {
+  border-bottom: 1px solid #dddddd;
+}
+.customTabs{
+  background-color: #F0F3F8;
+}
+
+.tab {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.15rem;
+  color: #02122f;
+}
+
+.tab > span {
+  text-transform: none;
+}
+.customTab {
+  display: flex;
+    justify-content: flex-start;
+    min-width: auto;
+    margin-right: 35px;
+}
+
+.tabIndicator {
+  height: 4px !important;
+  color: #f4266e;
+}
+
+.tabPanel {
+  flex: 1;
+  overflow: auto;
+  padding: 2rem;
+}
+
+.notificationBlip {
+  position: absolute;
+  bottom: -6px;
+  height: 8px;
+  width: 8px;
+  background: #ff0000;
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+}
+.px55 {
+  padding-right: 4.5rem !important;
+  padding-left: 4.5rem !important;
+}

@@ -1,0 +1,16 @@
+.innerContainer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.text {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    color: #02122F;
+    text-align: center;
+    margin-top: 26px;
+    opacity: 0.5;
+}

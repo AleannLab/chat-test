@@ -1,0 +1,224 @@
+.warningContainer {
+    width: 100%;
+    background: #E63A25;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.errorIcon {
+    margin-right: 0.5rem;
+    color: #FFFFFF;
+    font-size: 1.25rem;
+}
+
+.warningText {
+    font-family: "Montserrat";
+    color: #FFFFFF;
+    font-size: 0.85rem;
+}
+
+.chatContainer {
+    background: white;
+    display: grid;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 14px 0px;
+    align-content: center;
+    align-items: Left;
+    grid-area: ChatForm;
+    border-radius: 0 0 10px 10px;
+    border-top: 1px solid #BBC1CD;
+    height: 20px;
+    z-index: 10;
+}
+
+.chatContainer>img {
+    cursor: pointer;
+}
+
+.chatContainer input {
+    outline: none;
+    border: none;
+    color: #330;
+    border-radius: 6px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.chatTextarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    max-height: 21px;
+    min-height: 21px;
+    overflow-y: hidden;
+    resize: none;
+    line-height: 1;
+    font-size: 14;
+    font-family: 'Montserrat';
+    vertical-align: middle
+}
+
+.chatTextarea::placeholder {
+    color: #999999;
+    font-size: 14px;
+    font-family: 'Montserrat'
+}
+
+.actionButton {
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    padding-right: 30px !important;
+    padding: 0;
+}
+
+.sendBtnActive path {
+    fill: #F4266E;
+}
+
+.autoSizeTextBox {
+    width: 100%;
+    resize: none;
+    margin: 1rem 0.5rem !important;
+    border: 0px;
+    font-size: 1rem;
+    background-color: #fff;
+}
+
+/* TODO move styles below to separate component*/
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 4px;
+  position: absolute;
+  top: -165px;
+  left: 0;
+  right: 0;
+  height: 165px;
+  background: #F0F3F8;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 18px;
+  background: #E6EBF4;
+  color: #999999;
+  font-family: Montserrat;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 12px;
+  text-align: center;
+}
+
+.list {
+  padding-inline-start: 0;
+}
+
+.containerVariables {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: auto;
+}
+
+.constantsItems {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  min-height: 28px;
+  width: 100%;
+}
+
+.constantsItems_marker {
+  margin-left: -10px;
+  height: 28px;
+  width: 3px;
+  background-color: #F4266E;
+  margin-left: -10px;
+  margin-right: 7px;
+}
+
+.constantsItems_button {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding-left: 10px;
+  min-height: 28px;
+  width: 100%;
+  border: none;
+  background: #F0F3F8;
+  opacity: 1;
+}
+
+.constantsItems_button:hover, .constantsItems_button:focus, .constantsItems_button_focused {
+  background: #566F9F;
+}
+
+.constantsItems_button:focus > *, .constantsItems_button_focused > *, .constantsItems_button:hover > * {
+  color: #FFFFFF !important;
+}
+
+.constantsItems_variable {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  text-align: left;
+  width: 163px;
+}
+
+.constantsItems_description {
+  padding-left: 25px;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #999999;
+}
+
+.onTextCover {
+  display: flex;
+  position: absolute;
+  max-height: 1px;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.onTextCoverText {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 17px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  margin-left: 16px;
+  margin-top: 18px;
+  z-index: 10;
+}
+
+.containerButton {
+  display: flex;
+  gap: 14px;
+  position: relative;
+  z-index:1;
+  justify-content: center;
+  align-items: center;
+  padding-left: 20px;
+}

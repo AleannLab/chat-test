@@ -1,0 +1,13 @@
+.wrapperChatInformation {
+  padding: 1px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.avatarLastMessage {
+  bottom: -8px;
+  right: -5px;
+}

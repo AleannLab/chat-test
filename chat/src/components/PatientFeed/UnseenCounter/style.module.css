@@ -1,0 +1,17 @@
+.counter {
+  font-family: Montserrat;
+  width: 18px;
+  height: 14px;
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  left: 6px;
+  background: #FF0000;
+  border: 1px solid #243656;
+  border-radius: 3px;
+  color: white;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 12px;
+  text-align: center;
+}

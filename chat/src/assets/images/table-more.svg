@@ -1,0 +1,14 @@
+<svg width="24" height="24" version="1.1" viewBox="0 0 6.35 6.35" xmlns="http://www.w3.org/2000/svg">
+ <g transform="scale(.26458)" style="fill:none">
+  <circle cx="12" cy="12" r="12" fill="#d8deea"/>
+ </g>
+ <g transform="matrix(.26458 0 0 .26458 2.9104 2.9104)" style="fill:none">
+  <rect width="2" height="2" fill="#243656"/>
+ </g>
+ <g transform="matrix(.26458 0 0 .26458 3.9598 2.9104)" style="fill:none">
+  <rect width="2" height="2" fill="#243656"/>
+ </g>
+ <g transform="matrix(.26458 0 0 .26458 1.8612 2.9104)" style="fill:none">
+  <rect width="2" height="2" fill="#243656"/>
+ </g>
+</svg>
