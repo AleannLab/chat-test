@@ -1,0 +1,35 @@
+.wrapperUserMessage {
+  align-self: end;
+}
+
+.indentsDown {
+  margin-top: 16px;
+}
+
+.wrapperDataMessage {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.dataMessage {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+}
+
+.doneIcon {
+  width: 12px;
+  height: 12px;
+}
+
+.timeMessage {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  color: #9A9A9A;
+}
+
+.doneIconColor {
+  color: #9A9A9A;
+}

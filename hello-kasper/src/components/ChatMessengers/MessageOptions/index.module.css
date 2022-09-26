@@ -1,0 +1,13 @@
+.listItemIcon {
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+}
+
+.listItemText {
+  margin-top: 0;
+}
+
+.paper {
+  border-radius: 10px;
+  overflow: hidden;
+}

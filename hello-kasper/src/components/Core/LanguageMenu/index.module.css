@@ -1,0 +1,47 @@
+.root {
+    display: inline-flex;
+    z-index: 1;
+    font-family: "Montserrat";
+}
+
+.paper {
+    min-width: 130px;
+    max-width: 190px;
+}
+
+.menuButton {
+    background-color: #FFFFFF;
+    border: 1px solid #D2D2D2 !important;
+    border-radius: 100px !important;
+    padding: 4px 8px !important;
+}
+
+.menuButton:hover {
+    background-color: #FFFFFF;
+}
+
+.menuItem {
+    font-size: 0.85rem !important;
+    color: #02122F !important;
+}
+
+.menuItemIcon {
+    margin-right: 0.5rem;
+}
+
+.menuItemIcon svg {
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50px;
+}
+
+.selectedMenuItemIcon {
+    display: flex
+}
+
+.selectedMenuItemIcon svg {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50px;
+    border: 1px solid #D2D2D2;
+}
