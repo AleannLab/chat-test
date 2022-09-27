@@ -10,6 +10,9 @@ module.exports = (webpackConfigEnv, argv) => {
     webpackConfigEnv,
     argv,
     disableHtmlGeneration: true,
+    resolve: {
+      preferRelative: true,
+    },
   });
 
   return merge(defaultConfig, {
