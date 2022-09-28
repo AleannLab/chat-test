@@ -1,6 +1,7 @@
 const { merge } = require("webpack-merge");
 const webpack = require("webpack");
 const singleSpaDefaults = require("webpack-config-single-spa-react");
+const Dotenv = require('dotenv-webpack');
 
 module.exports = (webpackConfigEnv, argv) => {
   const defaultConfig = singleSpaDefaults({
@@ -18,9 +19,9 @@ module.exports = (webpackConfigEnv, argv) => {
       port: 8500,
     },
     plugins: [
-      new webpack.DefinePlugin({
-        process: { env: {} },
-      }),
+      new Dotenv({
+        path: "./.env.development"
+      })
     ],
     module: {
       rules: [
