@@ -22,11 +22,3 @@ export const fetch = async (path, data) => {
   return response;
 };
 
-export const fetchVoip = (path, data) =>
-  fetch(`${CONSTANTS.VOIP_API_URL}${path}`, data);
-
-export const fetchBlob = async (path) => {
-  const response = await window.fetch(path, {});
-  const blob = await response.blob();
-  return blob;
-};
