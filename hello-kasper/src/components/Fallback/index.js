@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react';
 import { Box, Button, Typography } from '@material-ui/core';
-import { ReactComponent as ErrorIcon } from 'assets/images/coffee-spill.svg';
+// import { ReactComponent as ErrorIcon } from 'assets/images/coffee-spill.svg';
 
 export default function Fallback({ error = '', resetError }) {
   const reset = useCallback(() => {
@@ -17,7 +17,7 @@ export default function Fallback({ error = '', resetError }) {
       height="100vh"
       flexDirection="column"
     >
-      <ErrorIcon width="20rem" height="20rem" className="mb-4" />
+      {/* <ErrorIcon width="20rem" height="20rem" className="mb-4" /> */}
       <Typography variant="h4" color="primary">
         Oops! Something went wrong
       </Typography>

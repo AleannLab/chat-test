@@ -27,8 +27,7 @@ export default function FormLogin() {
     password: "",
   };
   const { authentication } = useStores();
-  console.log("authentication", authentication);
-  const isTenantValid = useMemo(() => authentication.loadedAuth && !authentication.invalidTenant, [authentication]);
+  const isTenantValid = useMemo(() => true, [authentication]);
   return (
     <>
       <HeadComp title="Login" />
@@ -130,7 +129,7 @@ const handleSubmitForm = ({ authentication, history, search }) =>
         /**
          * Refreshing the page instead of client side routing to reset state
          */
-        window.location.pathname = "/dashboard";
+        window.location.pathname = "/";
         // history.replace('/dashboard');
       }
     } catch (e) {

@@ -11,17 +11,16 @@ import MomentUtils from "@date-io/moment";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
 import { useFlags, withLDProvider } from "launchdarkly-react-client-sdk";
-import CONSTANTS from "helpers/constants";
-import { analyticsInitialize } from "helpers/analytics";
+import CONSTANTS from "./helpers/constants";
+import { analyticsInitialize } from "./helpers/analytics";
 import * as Sentry from "@sentry/react";
-import ErrorLogs from "helpers/errorLogs";
+import ErrorLogs from "./helpers/errorLogs";
 import LogRocket from "logrocket";
 import setupLogRocketReact from "logrocket-react";
-
+import Fallback from "./components/Fallback";
 
 const TENANT_ID =
   CONSTANTS.TEST_TENANT_ID || window.location.hostname.split(".")[0];
-
 
 export const queryClient = new QueryClient({
   defaultOptions: {
@@ -42,7 +41,6 @@ const App = () => {
     if (enableLogRocket) {
       LogRocket.init(CONSTANTS.LOGROCKET_APP_ID);
       setupLogRocketReact(LogRocket);
-
       // Initialize LogRocket with user details
       LogRocket.identify("Kasper");
     }
@@ -54,14 +52,20 @@ const App = () => {
       ErrorLogs.init(showSentryUserFeedback);
   }, [showSentryUserFeedback]);
   return (
-    <QueryClientProvider client={queryClient}>
-      <ThemeProvider theme={theme}>
-        <MuiPickersUtilsProvider utils={MomentUtils}>
-          <CssBaseline />
-          <Routes />
-        </MuiPickersUtilsProvider>
-      </ThemeProvider>
-    </QueryClientProvider>
+    <Sentry.ErrorBoundary
+      fallback={() => <Fallback />}
+      showDialog={showSentryUserFeedback}
+    >
+      <QueryClientProvider client={queryClient}>
+        <ThemeProvider theme={theme}>
+          <MuiPickersUtilsProvider utils={MomentUtils}>
+            <CssBaseline />
+            <Routes />
+          </MuiPickersUtilsProvider>
+        </ThemeProvider>
+        <ReactQueryDevtools initialIsOpen={false} />
+      </QueryClientProvider>
+    </Sentry.ErrorBoundary>
   );
 };
 
