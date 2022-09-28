@@ -13,7 +13,7 @@ export default function HeadComp({
   lang = 'en',
 }) {
   useEffect(() => {
-    // trackPageView(title);
+    trackPageView(title);
   }, [title]);
   return (
     <Helmet>

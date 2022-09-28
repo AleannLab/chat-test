@@ -5,10 +5,9 @@ import App from "./root.component";
 import "./index.css";
 import * as serviceWorker from "./serviceWorker";
 import ErrorLogs from "./helpers/errorLogs";
-import { firebaseInitialize } from "./helpers/firebase";
 
 ErrorLogs.init();
-// firebaseInitialize()
+
 const lifecycles = singleSpaReact({
   React,
   ReactDOM,
