@@ -11,30 +11,44 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Link, useLocation } from "react-router-dom";
 import { Form, Formik } from "formik";
 import * as Yup from "yup";
-import { useStores } from "../../hooks/useStores";
 import { emailValidation, passwordValidation } from "../../helpers/validations";
 import TextInputField from "../Core/Formik/TextInputField";
 import PasswordInputField from "../Core/Formik/PasswordInputField";
 import HeadComp from "../SEO/HelmetComp";
 import WorkspaceCard from "./WorkspaceCard";
+import { useAuthenticationState } from "../../hooks/useAuthenticationState";
+import { useAuthenticationDispatch } from "../../hooks/useAuthenticationDispatch";
+import * as Sentry from "@sentry/react";
+import LogRocket from "logrocket";
 
 export default function FormLogin() {
   const classes = useStyles();
   const location = useLocation();
   const search = location.search;
+  const { login, setAuthData } = useAuthenticationDispatch();
   const initialValues = {
     email: "",
     password: "",
   };
-  const { authentication } = useStores();
-  const isTenantValid = useMemo(() => true, [authentication]);
+  const authentication = useAuthenticationState();
+  const isTenantValid = useMemo(
+    () => authentication.loadedAuth && !authentication.invalidTenant,
+    [authentication]
+  );
+
   return (
     <>
       <HeadComp title="Login" />
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
-        onSubmit={handleSubmitForm({ authentication, history, search })}
+        onSubmit={handleSubmitForm({
+          authentication,
+          history,
+          search,
+          login,
+          setAuthData,
+        })}
       >
         {({ isSubmitting }) => (
           <Container
@@ -97,7 +111,7 @@ export default function FormLogin() {
                   color="secondary"
                 >
                   <Typography>
-                    {isSubmitting ? `Loading...` : `Log In`}{" "}
+                    {isSubmitting ? `Loading...` : `Log In`}
                   </Typography>
                 </Button>
               </Box>
@@ -109,15 +123,34 @@ export default function FormLogin() {
   );
 }
 
-const handleSubmitForm = ({ authentication, history, search }) =>
+const handleSubmitForm = ({
+  authentication,
+  history,
+  search,
+  login,
+  setAuthData,
+}) =>
   async function (val, { setSubmitting, resetForm, setFieldError }) {
+    const {
+      user,
+    } = authentication;
+
     try {
       setSubmitting(true);
-      var data = {
+      const data = {
         ...val,
         email: val.email.toLowerCase(),
       };
-      await authentication?.login(data);
+      const { email, password } = data;
+      const cognitoUser = await Auth.signIn(email.toLowerCase(), password);
+      const { signInUserSession } = cognitoUser;
+      Sentry.setUser({ email });
+      login(cognitoUser);
+      setAuthData(signInUserSession);
+      LogRocket.identify(user.id, {
+        name: user.username,
+        email: user.email,
+      });
       if (search) {
         const route = search.split("/")[1];
         /**

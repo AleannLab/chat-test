@@ -26,7 +26,7 @@ configure({
 class RootStore {
   constructor() {
     this.routing = new RouterStore();
-    this.authentication = new Authentication(this);
+    // this.authentication = new Authentication(this);
     this.users = new Users(this);
     this.activityLogs = new ActivityLog(this);
     this.localServerApp = new LocalServerApp(this);

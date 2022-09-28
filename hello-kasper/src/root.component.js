@@ -18,6 +18,7 @@ import ErrorLogs from "./helpers/errorLogs";
 import LogRocket from "logrocket";
 import setupLogRocketReact from "logrocket-react";
 import Fallback from "./components/Fallback";
+import { AuthenticationContextProvider } from "./context";
 
 const TENANT_ID =
   CONSTANTS.TEST_TENANT_ID || window.location.hostname.split(".")[0];
@@ -33,6 +34,7 @@ export const queryClient = new QueryClient({
 const App = () => {
   const { enableGoogleAnalytics, showSentryUserFeedback, enableLogRocket } =
     useFlags();
+
   if (enableGoogleAnalytics) {
     analyticsInitialize();
   }
@@ -47,24 +49,23 @@ const App = () => {
   }, [enableLogRocket]);
 
   // Initialize error logs
-  useEffect(() => {
-    showSentryUserFeedback !== undefined &&
-      ErrorLogs.init(showSentryUserFeedback);
-  }, [showSentryUserFeedback]);
+
   return (
     <Sentry.ErrorBoundary
       fallback={() => <Fallback />}
       showDialog={showSentryUserFeedback}
     >
-      <QueryClientProvider client={queryClient}>
-        <ThemeProvider theme={theme}>
-          <MuiPickersUtilsProvider utils={MomentUtils}>
-            <CssBaseline />
-            <Routes />
-          </MuiPickersUtilsProvider>
-        </ThemeProvider>
-        <ReactQueryDevtools initialIsOpen={false} />
-      </QueryClientProvider>
+      <AuthenticationContextProvider>
+        <QueryClientProvider client={queryClient}>
+          <ThemeProvider theme={theme}>
+            <MuiPickersUtilsProvider utils={MomentUtils}>
+              <CssBaseline />
+              <Routes />
+            </MuiPickersUtilsProvider>
+          </ThemeProvider>
+          <ReactQueryDevtools initialIsOpen={false} />
+        </QueryClientProvider>
+      </AuthenticationContextProvider>
     </Sentry.ErrorBoundary>
   );
 };

@@ -22,7 +22,7 @@ export class Authentication {
 
   init = flow(function* () {
     this.authenticatedData = JSON.parse(localStorage.getItem("token"));
-    console.log("this.authenticatedData", this.authenticatedData);
+
     yield this.assignWorkSpace({});
 
     if (this.invalidTenant === false) {
@@ -34,11 +34,9 @@ export class Authentication {
 
         yield this.stores.users.notificationSubscribe({});
 
-        console.log("auth init", this.cognitoUser, session);
         this._setAuthData({ user: this.user, session });
       } catch (e) {
         console.log(e);
-        console.log("Call from auth catch");
         this.logout({});
       }
     }
@@ -130,8 +128,6 @@ export class Authentication {
         this.cognitoUser,
         newPassword
       );
-
-      console.log("*** this.cognitoUser", this.cognitoUser);
     } catch (e) {
       console.debug(e);
     }
@@ -142,10 +138,8 @@ export class Authentication {
 
     try {
       session = yield Auth.currentSession();
-
       this._setAuthData({ user: this.user, session });
     } catch (e) {
-      console.log("refreshAndGetSession", e);
       session = null;
     }
 
@@ -162,7 +156,6 @@ export class Authentication {
   };
 
   _getTenantApiHandler = async ({ tenantId }) => {
-    console.log("_getTenantApiHandler called");
     const result = await fetch(`${CONSTANTS.ADMIN_API_URL}/office/aws`, {
       method: "GET",
       headers: {
@@ -174,11 +167,9 @@ export class Authentication {
     }).then((r) => r.json());
 
     if (result.status === 403) {
-      console.log("_getTenantApiHandler error", result);
       this.stores.notification.showError("Invalid office.");
       return null;
     } else {
-      console.log("_getTenantApiHandler", result);
       return result.data;
     }
   };
