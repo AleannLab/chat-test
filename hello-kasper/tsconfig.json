@@ -1,0 +1,13 @@
+{
+  "extends": "ts-config-single-spa",
+  "compilerOptions": {
+    "module": "commonjs",
+    "jsx": "react",
+    "declarationDir": "dist",
+    "baseUrl": "./src",
+    "moduleResolution": "node"
+  },
+  "files": ["src/app-hello-kasper.tsx"],
+  "include": ["src/**/*"],
+  "exclude": ["src/**/*.test*"]
+}

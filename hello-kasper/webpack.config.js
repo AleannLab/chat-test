@@ -1,6 +1,5 @@
 const { merge } = require("webpack-merge");
-const webpack = require("webpack");
-const singleSpaDefaults = require("webpack-config-single-spa-react");
+const singleSpaDefaults = require("webpack-config-single-spa-react-ts");
 const Dotenv = require("dotenv-webpack");
 
 module.exports = (webpackConfigEnv, argv) => {
@@ -51,19 +50,6 @@ module.exports = (webpackConfigEnv, argv) => {
           test: /\.ts$/,
           use: ["ts-loader"],
         },
-        // {
-        //   test: /\.jsx?$/,
-        //   loader: "babel",
-        //   query: {
-        //     cacheDirectory: true,
-        //     plugins: ["transform-decorators-legacy"],
-        //     presets: ["es2015", "stage-0", "react"],
-        //   },
-        // },
-        // {
-        //   test: /\.css$/,
-        //   use: ["css-loader", "style-loader"],
-        // },
       ],
     },
   });
