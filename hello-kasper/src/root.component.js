@@ -12,9 +12,7 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
 import { useFlags, withLDProvider } from "launchdarkly-react-client-sdk";
 import CONSTANTS from "./helpers/constants";
-import { analyticsInitialize } from "./helpers/analytics";
 import * as Sentry from "@sentry/react";
-import ErrorLogs from "./helpers/errorLogs";
 import LogRocket from "logrocket";
 import setupLogRocketReact from "logrocket-react";
 import Fallback from "./components/Fallback";
@@ -35,9 +33,7 @@ const App = () => {
   const { enableGoogleAnalytics, showSentryUserFeedback, enableLogRocket } =
     useFlags();
 
-  if (enableGoogleAnalytics) {
-    analyticsInitialize();
-  }
+
 
   useEffect(() => {
     if (enableLogRocket) {

@@ -12,7 +12,6 @@ const assignWorkSpace = async (args, setInvalidTenant) => {
   });
   if (data) {
     const { clientId, userPoolId } = data;
-    console.log(clientId, "clientId");
     Amplify.configure({
       Auth: {
         userPoolWebClientId: clientId,

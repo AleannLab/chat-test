@@ -1,5 +1,4 @@
 import Resource from "./utils/resource";
-import AsyncStore from "./utils/AsyncStore";
 import { flow, action, observable } from "mobx";
 import { serializeToQueryString } from "../helpers/misc";
 import { createTransformer } from "mobx-utils";
@@ -339,15 +338,19 @@ export class Users extends Resource {
     }
   });
 
-  userMe = flow(function* (_args) {
-    let user = yield this._userMe();
+  async userMe(_args) {
+    let user = await this._userMe();
+    console.log("user", user);
+
     return user;
-  });
+  }
 
   async _userMe() {
     let result = await this.fetch(`${CONSTANTS.OFFICE_API_URL}/users/me`, {
       method: "POST",
-    }).then((r) => r.json());
+    }).then((r) => {
+      return r.json();
+    });
 
     return result.data;
   }

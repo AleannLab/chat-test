@@ -1,11 +1,9 @@
 import { Auth } from "aws-amplify";
 
-const refreshAndGetSession = (setAuthData, user) => {
+const refreshAndGetSession = async () => {
   let session;
-
   try {
-    session = yield Auth.currentSession();
-    setAuthData({ user, session });
+    session = await Auth.currentSession();
   } catch (e) {
     session = null;
   }

@@ -1,11 +1,10 @@
-import CONSTANTS, { AUTHORIZATION_TYPE } from '../../helpers/constants';
-import { endLoading, startLoading } from '../../helpers/loadstates';
-import { capitalizeFirstLetter, guidGenerator } from '../../helpers/misc';
-import { get as _get } from 'lodash';
-import { flow, observable } from 'mobx';
-import { createTransformer } from 'mobx-utils';
-import ErrorLogs from '../../helpers/errorLogs';
-
+import CONSTANTS, { AUTHORIZATION_TYPE } from "../../helpers/constants";
+import { endLoading, startLoading } from "../../helpers/loadstates";
+import { capitalizeFirstLetter, guidGenerator } from "../../helpers/misc";
+import { get as _get } from "lodash";
+import { createTransformer } from "mobx-utils";
+import ErrorLogs from "../../helpers/errorLogs";
+import { refreshAndGetSession } from "../../helpers/refreshAndGetSession";
 export class Resource {
   auth = {};
   notification = {};
@@ -18,29 +17,29 @@ export class Resource {
   datum = {};
 
   async fetch(
-    url = '',
+    url = "",
     data = {},
     token = null,
-    authType = AUTHORIZATION_TYPE.USER,
+    authType = AUTHORIZATION_TYPE.USER
   ) {
     const INTERACTION_ID = guidGenerator();
     try {
       let session = null;
       const tenantId =
-        CONSTANTS.TEST_TENANT_ID || window.location.hostname.split('.')[0];
+        CONSTANTS.TEST_TENANT_ID || window.location.hostname.split(".")[0];
 
       if (authType === AUTHORIZATION_TYPE.TENANT) {
         token = `${CONSTANTS.ENV}-${tenantId}-tenant`;
       } else {
-        session = await this.authentication.refreshAndGetSession({});
+        session = await refreshAndGetSession({});
       }
 
       let result = await fetch(url, {
         ...data,
         headers: {
-          'Content-Type': 'application/json',
-          'x-custom-tenant-id': tenantId,
-          'x-interaction-id': INTERACTION_ID,
+          "Content-Type": "application/json",
+          "x-custom-tenant-id": tenantId,
+          "x-interaction-id": INTERACTION_ID,
           ...(session
             ? {
                 Authorization: `Bearer ${session
@@ -62,23 +61,14 @@ export class Resource {
         this.authentication.logout({});
       } else if (result.status !== 200) {
         ErrorLogs.captureException(`API Error`, INTERACTION_ID);
-
-        // const response = await result.json();
-        // const errorMessage = response?.error?.DetailedMessage
-        //   ? response.error.DetailedMessage
-        //   : 'Unknown error';
-        // ErrorLogs.captureException(
-        //   `API error - ${errorMessage}`,
-        //   INTERACTION_ID,
-        // );
       }
 
       return result;
     } catch (e) {
-      if (e.name !== 'AbortError') {
+      if (e.name !== "AbortError") {
         ErrorLogs.captureException(e.message, INTERACTION_ID);
         throw Error(
-          'An unexpected error occurred while attempting to fetch the resources',
+          "An unexpected error occurred while attempting to fetch the resources"
         );
       }
     }
@@ -97,7 +87,7 @@ export class Resource {
     this.datum[id] = {};
   }
 
-  fetchList = flow(function* (params) {
+  fetchList = function* (params) {
     const { refreshList } = params || {};
 
     this.loading = true;
@@ -109,7 +99,7 @@ export class Resource {
           result,
           this.datum[result.id],
           index,
-          results,
+          results
         );
         return result.id;
       });
@@ -118,22 +108,22 @@ export class Resource {
       this.loaded = true;
       return results;
     } catch (e) {
-      console.error('Fetchlist error', e);
+      console.error("Fetchlist error", e);
       this.error = e;
       this.notification.showError(
-        'An unexpected error occurred while attempting to fetch the data',
+        "An unexpected error occurred while attempting to fetch the data"
       );
     }
-  });
+  };
 
   async fetchListQuery(params) {
     try {
       const result = await this.listApiHandler(params);
       return result;
     } catch (e) {
-      console.error('Fetchlist error', e);
+      console.error("Fetchlist error", e);
       this.notification.showError(
-        'An unexpected error occurred while attempting to fetch the data',
+        "An unexpected error occurred while attempting to fetch the data"
       );
     }
   }
@@ -152,7 +142,7 @@ export class Resource {
     };
   }
 
-  fetchOne = flow(function* (args) {
+  fetchOne = function* (args) {
     this.loading = true;
     this.error = {};
     try {
@@ -161,13 +151,13 @@ export class Resource {
       this.loading = false;
       this.loaded = true;
     } catch (e) {
-      console.error('Get error', e);
+      console.error("Get error", e);
       this.notification.showError(
-        'An unexpected error occurred while attempting to fetch the data',
+        "An unexpected error occurred while attempting to fetch the data"
       );
       this.error = e;
     }
-  });
+  };
 
   get = createTransformer(([defaultVal, ...path]) => {
     const val = _get(this.datum, path, defaultVal);
@@ -175,7 +165,7 @@ export class Resource {
     return defaultVal;
   });
 
-  delete = flow(function* (args) {
+  delete = function* (args) {
     this.loading = true;
     this.error = {};
     try {
@@ -185,15 +175,15 @@ export class Resource {
       //yield this.list();
       yield this.fetchList();
     } catch (e) {
-      console.error('Delete error', e);
+      console.error("Delete error", e);
       this.error = e;
       this.notification.showError(
-        'An unexpected error occurred while attempting to delete the resources',
+        "An unexpected error occurred while attempting to delete the resources"
       );
     }
-  });
+  };
 
-  create = flow(function* (args) {
+  create = function* (args) {
     this.loading = true;
     this.error = {};
     try {
@@ -202,15 +192,15 @@ export class Resource {
       this.loaded = true;
       yield this.fetchList();
     } catch (e) {
-      console.error('Create error', e);
+      console.error("Create error", e);
       this.error = e;
       this.notification.showError(
-        'An unexpected error occurred while attempting to create the resources',
+      "An unexpected error occurred while attempting to create the resources"
       );
     }
-  });
+  };
 
-  update = flow(function* (args) {
+  update = function* (args) {
     this.loading = true;
     this.error = {};
     try {
@@ -219,13 +209,13 @@ export class Resource {
       this.loaded = true;
       yield this.list();
     } catch (e) {
-      console.error('Update error', e);
+      console.error("Update error", e);
       this.error = e;
       this.notification.showError(
-        'An unexpected error occurred while attempting to update the resources',
+        "An unexpected error occurred while attempting to update the resources"
       );
     }
-  });
+  };
 
   registerSubResource = ({ resourceNamePlural }, { fetchList }) => {
     const syncState = `__${resourceNamePlural}_sync`;
@@ -242,11 +232,11 @@ export class Resource {
         this.datum[id][resourceNamePlural] = resourceData;
       } catch (e) {
         console.error(
-          `****** \n Error for resource ${resourceNamePlural} while ${fetchAllName}:  ${e.message} \n*******`,
+          `****** \n Error for resource ${resourceNamePlural} while ${fetchAllName}:  ${e.message} \n*******`
         );
         this.error = e;
         this.notification.showError(
-          `An unexpected error occurred while attempting to fetch the ${resourceNamePlural}`,
+          `An unexpected error occurred while attempting to fetch the ${resourceNamePlural}`
         );
       }
     });
@@ -261,7 +251,7 @@ export class Resource {
   }
 
   messageFormatter() {
-    return 'done!';
+    return "done!";
   }
 
   async listApiHandler() {

@@ -41,10 +41,10 @@ const AuthenticationContextProvider = ({ children }) => {
     });
   };
 
-  const login = (cognitoUser) => {
+  const login = (cognitoUser, user) => {
     dispatch({
       type: LOGIN,
-      payload: cognitoUser,
+      payload: { cognitoUser, user },
     });
   };
 
@@ -58,7 +58,7 @@ const AuthenticationContextProvider = ({ children }) => {
   const setAuthData = (user, session) => {
     dispatch({
       type: SET_AUTH_DATA,
-      payload: {user, session},
+      payload: { user, session },
     });
   };
 

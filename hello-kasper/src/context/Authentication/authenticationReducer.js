@@ -36,7 +36,7 @@ const authenticationReducer = (state, action) => {
       };
     }
     case SET_AUTH_DATA: {
-      const {user, session} = payload
+      const { user, session } = payload;
       const authenticatedData = {
         data: user,
         ...session,
@@ -48,11 +48,11 @@ const authenticationReducer = (state, action) => {
       };
     }
     case LOGIN: {
-      state.stores.users.notificationSubscribe({});
+      const { user, cognitoUser } = payload;
       return {
         ...state,
-        cognitoUser: payload,
-        user: state.store.users.userMe({}),
+        cognitoUser,
+        user,
       };
     }
     case REFRESH_USER: {

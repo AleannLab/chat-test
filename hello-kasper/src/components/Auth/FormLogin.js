@@ -16,11 +16,12 @@ import TextInputField from "../Core/Formik/TextInputField";
 import PasswordInputField from "../Core/Formik/PasswordInputField";
 import HeadComp from "../SEO/HelmetComp";
 import WorkspaceCard from "./WorkspaceCard";
+import { Auth } from "aws-amplify";
 import { useAuthenticationState } from "../../hooks/useAuthenticationState";
 import { useAuthenticationDispatch } from "../../hooks/useAuthenticationDispatch";
 import * as Sentry from "@sentry/react";
 import LogRocket from "logrocket";
-
+import { store } from "../../stores";
 export default function FormLogin() {
   const classes = useStyles();
   const location = useLocation();
@@ -131,10 +132,6 @@ const handleSubmitForm = ({
   setAuthData,
 }) =>
   async function (val, { setSubmitting, resetForm, setFieldError }) {
-    const {
-      user,
-    } = authentication;
-
     try {
       setSubmitting(true);
       const data = {
@@ -145,8 +142,9 @@ const handleSubmitForm = ({
       const cognitoUser = await Auth.signIn(email.toLowerCase(), password);
       const { signInUserSession } = cognitoUser;
       Sentry.setUser({ email });
-      login(cognitoUser);
-      setAuthData(signInUserSession);
+      const user = await store.users.userMe({});
+      login(cognitoUser, user);
+      setAuthData(user, signInUserSession);
       LogRocket.identify(user.id, {
         name: user.username,
         email: user.email,

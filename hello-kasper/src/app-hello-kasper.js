@@ -4,9 +4,7 @@ import singleSpaReact from "single-spa-react";
 import App from "./root.component";
 import "./index.css";
 import * as serviceWorker from "./serviceWorker";
-import ErrorLogs from "./helpers/errorLogs";
 
-ErrorLogs.init();
 
 const lifecycles = singleSpaReact({
   React,

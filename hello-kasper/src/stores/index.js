@@ -2,10 +2,7 @@ import { configure } from 'mobx';
 import { RouterStore } from 'mobx-react-router';
 import 'mobx-react/batchingForReactDom';
 import React from 'react';
-import { ActivityLog } from './activityLog';
-import { Authentication } from './authentication';
 import { Users } from './users';
-import { LocalServerApp } from './lsa';
 
 const phoneFaxGreetingTypes = {
   awayGreeting: 1,
@@ -26,10 +23,7 @@ configure({
 class RootStore {
   constructor() {
     this.routing = new RouterStore();
-    // this.authentication = new Authentication(this);
     this.users = new Users(this);
-    this.activityLogs = new ActivityLog(this);
-    this.localServerApp = new LocalServerApp(this);
   }
 }
 
