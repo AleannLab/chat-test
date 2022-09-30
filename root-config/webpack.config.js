@@ -1,7 +1,7 @@
 const { merge } = require("webpack-merge");
 const singleSpaDefaults = require("webpack-config-single-spa");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-
+const path = require("path");
 module.exports = (webpackConfigEnv, argv) => {
   const orgName = "app";
   const defaultConfig = singleSpaDefaults({
@@ -16,7 +16,9 @@ module.exports = (webpackConfigEnv, argv) => {
   });
 
   return merge(defaultConfig, {
-    // modify the webpack config however you'd like to by adding to this object
+    output: {
+      path: path.resolve(__dirname, "build"),
+    },
     plugins: [
       new HtmlWebpackPlugin({
         inject: false,

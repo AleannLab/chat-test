@@ -1,7 +1,7 @@
 const { merge } = require("webpack-merge");
-const webpack = require("webpack");
-const singleSpaDefaults = require("webpack-config-single-spa-react");
 const Dotenv = require("dotenv-webpack");
+const path = require("path");
+const singleSpaDefaults = require("webpack-config-single-spa-react");
 
 module.exports = (webpackConfigEnv, argv) => {
   const defaultConfig = singleSpaDefaults({
@@ -23,6 +23,9 @@ module.exports = (webpackConfigEnv, argv) => {
         path: "./.env.development",
       }),
     ],
+    output: {
+      path: path.resolve(__dirname, 'build'),
+    },
     module: {
       rules: [
         {

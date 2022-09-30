@@ -12,12 +12,19 @@ const assignWorkSpace = async (args, setInvalidTenant) => {
   });
   if (data) {
     const { clientId, userPoolId } = data;
+    const cookieStorage = {
+      domain: ".meetkasper.com",
+      secure: true,
+      path: "/",
+      expires: 365,
+    };
     Amplify.configure({
       Auth: {
         userPoolWebClientId: clientId,
         userPoolId: userPoolId,
         authenticationFlowType: "USER_PASSWORD_AUTH",
       },
+      cookieStorage,
     });
   } else {
     setInvalidTenant(true);
