@@ -5,6 +5,7 @@ import App from "./root.component";
 import "./index.css";
 import * as serviceWorker from "./serviceWorker";
 
+
 const lifecycles = singleSpaReact({
   React,
   ReactDOM,

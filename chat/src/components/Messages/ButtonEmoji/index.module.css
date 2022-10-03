@@ -1,0 +1,14 @@
+.icon {
+  fill:#9a9a9a;
+  height: 20px; 
+  width: 20px;
+}
+.buttonIcon {
+  padding:  0px;
+   height: 17px;
+    width: 17px;
+}
+.popper { 
+  z-index: 1000;
+  top: -15px !important;
+}

@@ -1,0 +1,145 @@
+.card {
+  background: #ffffff;
+  border-radius: 0px;
+  cursor: pointer;
+  display: flex;
+  box-shadow: none;
+}
+
+.cardHeader {
+  background: #ffffff;
+  border-radius: 0px;
+  border-bottom: 1px #D2D2D2 solid;
+  height: 64px;
+}
+
+.selectedCard {
+  background-color: #F0F3F8;
+  border-radius: 0px;
+  display: flex;
+}
+
+.border {
+  border-bottom: 1px #D2D2D2 solid;
+  height: 1px;
+  width: 80%;
+  margin-left: 50px;
+}
+
+.borderBubble {
+  width: 100%;
+  margin-left: 63px;
+}
+
+.archiveAvatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: #566F9F;
+  color: #FFF;
+}
+
+.archiveAvatar * {
+  color: #FFF;
+}
+
+.content {
+  padding: 15px 10px 10px 10px;
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+
+.contentBubble {
+  padding: 15px 10px 10px 16px;
+}
+
+.inventoryIcon {
+  height: 16px;
+  width: 16px;
+}
+
+.selectedContent {
+  padding: 15px 10px 10px 10px;
+}
+
+.rowOnSelected {
+  min-height: 100%;
+  min-width: 3px;
+  background: #F4266E;
+  z-index: 1000;
+}
+
+.Typography {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  color: #02122F;
+  padding-left: 6px;
+}
+
+.selectedTypography {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  color: #02122F;
+  padding-left: 6px;
+}
+
+.containerSubtitle {
+  flex: 30%;
+  text-align: end;
+}
+
+.subtitle {
+  padding-left: 6px;
+  color: #02122F;
+  opacity: 0.5;
+  font-size: 11px;
+  font-weight: 400;
+  text-overflow: ellipsis;
+}
+
+.contextMenuIconButton {
+  padding: 0;
+  margin-left: auto;
+  margin-right: 5px;
+}
+
+.menuListItem {
+  align-items: center;
+}
+
+.listItemIcon {
+  min-width: 1.8rem;
+  min-height: 1.8rem;
+}
+
+.listItemText {
+  margin-top: 0;
+}
+
+.containerAvatar {
+  position: relative; 
+}
+
+.containerArchivedGroup {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 70%;
+}
+
+.online {
+  padding: 1px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}

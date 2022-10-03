@@ -1,10 +1,10 @@
-import React, { useCallback } from 'react';
-import { Box, Button, Typography } from '@material-ui/core';
-// import { ReactComponent as ErrorIcon } from 'assets/images/coffee-spill.svg';
+import React, { useCallback } from "react";
+import { Box, Button, Typography } from "@material-ui/core";
+// import  ErrorIcon  from 'assets/images/coffee-spill.svg';
 
-export default function Fallback({ error = '', resetError }) {
+export default function Fallback({ error = "", resetError }) {
   const reset = useCallback(() => {
-    resetError && typeof resetError === 'function'
+    resetError && typeof resetError === "function"
       ? resetError()
       : window.location.reload();
   }, [resetError]);

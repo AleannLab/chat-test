@@ -4,7 +4,7 @@ import CheckCircleIcon from "@material-ui/icons/CheckCircle";
 import CancelIcon from "@material-ui/icons/Cancel";
 import CONSTANTS from "../../helpers/constants";
 import Tooltip from "../Core/Tooltip";
-// import { ReactComponent as HelpIcon } from "../../assets/images/help-outlined.svg";
+// import  HelpIcon } from "../../assets/images/help-outlined.svg";
 
 const useStyles = makeStyles(() => ({
   root: {

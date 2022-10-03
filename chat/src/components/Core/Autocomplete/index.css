@@ -1,0 +1,49 @@
+.react-tags {
+    width: 100% !important;
+    padding: 8px;
+    border: 1px solid rgb(210, 210, 210);
+    border-radius: 4px
+}
+
+.react-tags__search-input {
+    width: 100% !important;
+    border: none
+}
+
+.react-tags__selected {
+    display: inline;
+}
+
+.react-tags .MuiChip-root {
+    background: #f8f8f8;
+    border: 1px solid #d2d2d2;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-family: "Montserrat";
+    font-size: 14px;
+    color: #02122f;
+    padding: 4px;
+    margin-right: 4px;
+    margin-bottom: 6px;
+}
+
+.react-tags .MuiChip-deleteIconSmall {
+    fill: #9a9a9a;
+    height: 12px;
+    margin: 0 -2px 0 0;
+}
+
+.react-tags__search-input:focus {
+    outline: none;
+}
+
+.react-tags__suggestions {
+    width: 400px;
+    max-height: 100px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.is-active {
+    display: block;
+}

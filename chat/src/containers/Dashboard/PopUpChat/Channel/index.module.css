@@ -1,0 +1,70 @@
+.member {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+
+
+.quantityMembers {
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+  color: #999999;
+}
+
+.wrapperCard {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.5px solid #D2D2D2;
+  width: 100%;
+  padding-right: 14px;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  min-height: 100%;
+  border-radius: 0;
+  flex-direction: column;
+  border: none;
+  box-shadow: none;
+  height: 40px;
+  padding: 30px 0px;
+}
+
+.cardSelect {
+  display: block;
+  border-bottom: none;
+  padding: 0;
+  height: 35px;
+}
+
+.time {
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+  color: #999999;
+  max-height: 17px;
+  flex: 23%;
+  text-align: end;
+}
+
+.lastMessage {
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+  color: #02122F;
+  opacity: 0.5;
+}
+
+.containerAvatar {
+  position: relative;
+}
+
+
