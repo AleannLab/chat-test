@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
 import "./App.css";
 import "./SentryOverride.css";
 import Routes from "containers/index";
@@ -13,8 +14,6 @@ import { ReactQueryDevtools } from "react-query/devtools";
 import { useFlags, withLDProvider } from "launchdarkly-react-client-sdk";
 import CONSTANTS from "./helpers/constants";
 import * as Sentry from "@sentry/react";
-import LogRocket from "logrocket";
-import setupLogRocketReact from "logrocket-react";
 import Fallback from "./components/Fallback";
 import { AuthenticationContextProvider } from "./context";
 
@@ -30,38 +29,26 @@ export const queryClient = new QueryClient({
 });
 
 const App = () => {
-  const { enableGoogleAnalytics, showSentryUserFeedback, enableLogRocket } =
-    useFlags();
-
-
-
-  useEffect(() => {
-    if (enableLogRocket) {
-      LogRocket.init(CONSTANTS.LOGROCKET_APP_ID);
-      setupLogRocketReact(LogRocket);
-      // Initialize LogRocket with user details
-      LogRocket.identify("Kasper");
-    }
-  }, [enableLogRocket]);
-
-  // Initialize error logs
+  const { showSentryUserFeedback } = useFlags();
 
   return (
     <Sentry.ErrorBoundary
       fallback={() => <Fallback />}
       showDialog={showSentryUserFeedback}
     >
-      <AuthenticationContextProvider>
-        <QueryClientProvider client={queryClient}>
-          <ThemeProvider theme={theme}>
-            <MuiPickersUtilsProvider utils={MomentUtils}>
-              <CssBaseline />
-              <Routes />
-            </MuiPickersUtilsProvider>
-          </ThemeProvider>
-          <ReactQueryDevtools initialIsOpen={false} />
-        </QueryClientProvider>
-      </AuthenticationContextProvider>
+      <Router>
+        <AuthenticationContextProvider>
+          <QueryClientProvider client={queryClient}>
+            <ThemeProvider theme={theme}>
+              <MuiPickersUtilsProvider utils={MomentUtils}>
+                <CssBaseline />
+                <Routes />
+              </MuiPickersUtilsProvider>
+            </ThemeProvider>
+            <ReactQueryDevtools initialIsOpen={false} />
+          </QueryClientProvider>
+        </AuthenticationContextProvider>
+      </Router>
     </Sentry.ErrorBoundary>
   );
 };
