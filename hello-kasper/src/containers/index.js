@@ -57,7 +57,7 @@ const Routes = observer(() => {
         setAuthData(user, session);
       } catch (e) {
         console.log("hi error", e);
-        setLogOut();
+        // setLogOut();
       }
     }
     setLoadedAuth(true);

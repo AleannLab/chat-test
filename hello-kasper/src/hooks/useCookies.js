@@ -14,8 +14,8 @@ const useCookies = (initialValue, cookieName) => {
   useEffect(() => {
     Cookies.set(cookieName, JSON.stringify(valueCookie), {
       expires: 1, //1 day
-      domain: '.meetkasper.com',
-      secure: true,
+      // domain: '.meetkasper.com',
+      // secure: true,
     });
   }, [valueCookie]);
   return [valueCookie, setValueCookie];
