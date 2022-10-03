@@ -1,24 +1,24 @@
-import React, { useEffect, useRef, useState, Fragment } from 'react';
-import { Scrollbars } from 'react-custom-scrollbars';
-import { observer } from 'mobx-react';
-import CircularProgress from '@material-ui/core/CircularProgress';
-import { uniq, isEmpty } from 'lodash';
-import moment from 'moment-timezone';
-import InputBox from '../Messages/InputBox';
-import { Reply } from 'components/Messages/Reply';
-import { useStores } from 'hooks/useStores';
-import  NoMessagesIcon from 'assets/images/no-messages.svg';
-import { ChatHeader } from './ChatHeader';
-import ChatMessage from './ChatMessage';
-import Divider from 'components/Divider';
-import styles from './index.module.css';
-import { getUserIds } from 'helpers/getUserIds';
+import React, { useEffect, useRef, useState, Fragment } from "react";
+import { Scrollbars } from "react-custom-scrollbars";
+import { observer } from "mobx-react";
+import CircularProgress from "@material-ui/core/CircularProgress";
+import { uniq, isEmpty } from "lodash";
+import moment from "moment-timezone";
+import InputBox from "../Messages/InputBox";
+import { Reply } from "components/Messages/Reply";
+import { useStores } from "hooks/useStores";
+import NoMessagesIcon from "assets/images/no-messages.svg";
+import { ChatHeader } from "./ChatHeader";
+import ChatMessage from "./ChatMessage";
+import Divider from "components/Divider";
+import styles from "./index.module.css";
+import { getUserIds } from "helpers/getUserIds";
 
 const NoMessageText = () => {
   return (
     <div
       className="flex-grow-1 d-flex flex-column justify-content-center align-items-center"
-      style={{ height: '100%' }}
+      style={{ height: "100%" }}
     >
       <div className="p-3">
         <NoMessagesIcon />
@@ -90,7 +90,7 @@ const OfficeChat = ({
         (await kittyOfficeChat
           .memberListGetter(selectedChannel)
           .then((res) =>
-            res?.filter(({ name }) => name !== authentication.user.email),
+            res?.filter(({ name }) => name !== authentication.user.email)
           )) || [];
       setMembers(members);
     }
@@ -102,12 +102,12 @@ const OfficeChat = ({
     const result = await kittyOfficeChat.sendMessage(
       message,
       selectedChannel,
-      replayedMessage,
+      replayedMessage
     );
     if (scrollbars.current) {
       scrollbars.current?.scrollToBottom();
     }
-    props.setFieldValue('chat', '');
+    props.setFieldValue("chat", "");
     setReplayedMessage(null);
   };
 
@@ -122,7 +122,7 @@ const OfficeChat = ({
           setScrolledToBottom(true);
         } else {
           scrollbars.current.scrollTop(
-            scrollbars.current.getScrollHeight() - oldScrollHeight,
+            scrollbars.current.getScrollHeight() - oldScrollHeight
           );
         }
       }
@@ -153,15 +153,15 @@ const OfficeChat = ({
           return moment
             .utc(message.createdTime)
             .tz(user.timezone)
-            .format('dddd, MMMM Do');
-        }),
+            .format("dddd, MMMM Do");
+        })
       );
       dates.forEach((date) => {
         const nMessages = messages.filter((message) => {
           const messageDate = moment
             .utc(message.createdTime)
             .tz(user.timezone)
-            .format('dddd, MMMM Do');
+            .format("dddd, MMMM Do");
           return messageDate == date;
         });
         groups[date] = nMessages;
@@ -177,7 +177,7 @@ const OfficeChat = ({
   const groupedMessage = groupMessagesByDate();
 
   const isTodayDate = (date) =>
-    moment.utc().tz(user.timezone).format('dddd, MMMM Do') == date;
+    moment.utc().tz(user.timezone).format("dddd, MMMM Do") == date;
 
   return (
     <div className={styles.chatContainer}>
@@ -199,7 +199,7 @@ const OfficeChat = ({
             >
               {isFetchingPreviousPage && (
                 <span>
-                  Loading...{' '}
+                  Loading...{" "}
                   <CircularProgress className={styles.chatSendingIndicator} />
                 </span>
               )}
@@ -222,11 +222,11 @@ const OfficeChat = ({
                         })}
                         <Divider>
                           {isToday
-                            ? 'Today'
+                            ? "Today"
                             : moment
                                 .utc(dMessages[0].createdTime)
                                 .tz(user.timezone)
-                                .format('dddd, MMMM Do')}
+                                .format("dddd, MMMM Do")}
                         </Divider>
                       </Fragment>
                     );

@@ -1,7 +1,7 @@
 import styles from './index.module.css';
-import Send from '../../../assets/images/send.svg';
+import Send from 'assets/images/send.svg';
 import { EditTwoTone as Edit } from '@material-ui/icons';
-import  EmptyMessages from '../../../assets/images/empty_messages.svg';
+import EmptyMessages from 'assets/images/empty_messages.svg';
 import { DragDropContext, Draggable, Droppable } from 'react-beautiful-dnd';
 import { HighlightingVariables } from './HighlightingVariables';
 

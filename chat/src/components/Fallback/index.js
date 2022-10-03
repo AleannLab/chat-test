@@ -1,6 +1,6 @@
 import React, { useCallback } from "react";
 import { Box, Button, Typography } from "@material-ui/core";
-import ErrorIcon from 'assets/images/coffee-spill.svg';
+import ErrorIcon from "assets/images/coffee-spill.svg";
 
 export default function Fallback({ error = "", resetError }) {
   const reset = useCallback(() => {

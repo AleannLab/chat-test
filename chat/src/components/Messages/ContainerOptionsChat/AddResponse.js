@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import styles from './index.module.css';
 import MentionInputField from './MentionInputFieldEdit';
 import { Button } from '@material-ui/core';
-import  Trash from '../../../assets/images/delete.svg';
+import Trash from 'assets/images/delete.svg';
 import { utilizeFocus } from './utilizeFocus';
 import {
   replaceBackMessageSpecialCharacters,

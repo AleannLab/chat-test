@@ -1,5 +1,5 @@
 import styles from './index.module.css';
-import  Message from '../../../assets/images/message_silver.svg';
+import Message from 'assets/images/message_silver.svg';
 import AddIcon from '@material-ui/icons/Add';
 import { ExpandLess, ExpandMore } from '@material-ui/icons';
 import { RapidReplies } from './RapidReplies';

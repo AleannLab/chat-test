@@ -1,4 +1,4 @@
-// import IncomingMessageAudio from '../../assets/sounds/incoming_message.wav';
+import IncomingMessageAudio from '../../assets/sounds/incoming_message.wav';
 import { store } from 'stores';
 import { useFlags } from 'launchdarkly-react-client-sdk';
 
@@ -82,7 +82,7 @@ const PushNotification = {
       ...notifyStore.notifyData,
     };
     if ((sms_sound && !mute_all_sounds) || type == 'test') {
-      const audio = new Audio();
+      const audio = new Audio(IncomingMessageAudio);
       audio.play();
     }
 
@@ -103,7 +103,7 @@ const PushNotification = {
       ...notifyStore.notifyData,
     };
     if (!mute_all_sounds) {
-      const audio = new Audio();
+      const audio = new Audio(IncomingMessageAudio);
       audio.play();
     }
 

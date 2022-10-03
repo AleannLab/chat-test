@@ -1,10 +1,11 @@
-import { observable, flow } from 'mobx';
-import Amplify, { Auth } from 'aws-amplify';
+import { observable, flow } from "mobx";
+import Amplify, { Auth } from "aws-amplify";
+
 // import moment from "moment";
-import CONSTANTS, { AUTHORIZATION_TYPE } from 'helpers/constants';
-import { getFcmToken } from 'helpers/firebase';
-import * as Sentry from '@sentry/react';
-import LogRocket from 'logrocket';
+import CONSTANTS, { AUTHORIZATION_TYPE } from "helpers/constants";
+import { getFcmToken } from "helpers/firebase";
+import * as Sentry from "@sentry/react";
+import LogRocket from "logrocket";
 
 // window.LOG_LEVEL = 'DEBUG';
 
@@ -21,8 +22,8 @@ export class Authentication {
   }
 
   init = flow(function* () {
-    this.authenticatedData = JSON.parse(localStorage.getItem('token'));
-    console.log('this.authenticatedData', this.authenticatedData);
+    this.authenticatedData = JSON.parse(localStorage.getItem("token"));
+    console.log("this.authenticatedData", this.authenticatedData);
     yield this.assignWorkSpace({});
 
     if (this.invalidTenant === false) {
@@ -34,11 +35,11 @@ export class Authentication {
 
         yield this.stores.users.notificationSubscribe({});
 
-        console.log('auth init', this.cognitoUser, session);
+        console.log("auth init", this.cognitoUser, session);
         this._setAuthData({ user: this.user, session });
       } catch (e) {
         console.log(e);
-        console.log('Call from auth catch');
+        console.log("Call from auth catch");
         this.logout({});
       }
     }
@@ -49,12 +50,12 @@ export class Authentication {
   login = flow(function* ({ email, password }) {
     this.cognitoUser = yield Auth.signIn(email.toLowerCase(), password);
 
-    console.log('login cognitoUser', this.cognitoUser, yield getFcmToken());
+    console.log("login cognitoUser", this.cognitoUser, yield getFcmToken());
     Sentry.setUser({ email: email });
 
     const { signInUserSession } = this.cognitoUser;
-    if (this.cognitoUser.challengeName === 'NEW_PASSWORD_REQUIRED') {
-      throw new Error('NEW_PASSWORD_REQUIRED');
+    if (this.cognitoUser.challengeName === "NEW_PASSWORD_REQUIRED") {
+      throw new Error("NEW_PASSWORD_REQUIRED");
     }
 
     this.user = yield this.stores.users.userMe({});
@@ -82,7 +83,7 @@ export class Authentication {
   logout = flow(function* (args) {
     this.authenticatedData = null;
     yield Auth.signOut();
-    console.log('logout cleared');
+    console.log("logout cleared");
     localStorage.clear();
     if (this.user?.phone_access) this.stores.dialer.disconnect();
   });
@@ -104,26 +105,19 @@ export class Authentication {
     let tenantId =
       args.tenantId ||
       CONSTANTS.TEST_TENANT_ID ||
-      window.location.hostname.split('.')[0];
+      window.location.hostname.split(".")[0];
     const data = yield this._getTenantApiHandler({
       tenantId: tenantId,
     });
 
     if (data) {
       const { clientId, userPoolId } = data;
-      const cookieStorage = {
-        domain: '.meetkasper.com',
-        secure: true,
-        path: '/login',
-        expires: 365,
-      };
       Amplify.configure({
         Auth: {
           userPoolWebClientId: clientId,
           userPoolId: userPoolId,
-          authenticationFlowType: 'USER_PASSWORD_AUTH',
+          authenticationFlowType: "USER_PASSWORD_AUTH",
         },
-        cookieStorage,
       });
     } else {
       this.invalidTenant = true;
@@ -135,10 +129,10 @@ export class Authentication {
       this.cognitoUser = yield Auth.signIn(email.toLowerCase(), oldPassword);
       this.cognitoUser = yield Auth.completeNewPassword(
         this.cognitoUser,
-        newPassword,
+        newPassword
       );
 
-      console.log('*** this.cognitoUser', this.cognitoUser);
+      console.log("*** this.cognitoUser", this.cognitoUser);
     } catch (e) {
       console.debug(e);
     }
@@ -152,7 +146,7 @@ export class Authentication {
 
       this._setAuthData({ user: this.user, session });
     } catch (e) {
-      console.log('refreshAndGetSession', e);
+      console.log("refreshAndGetSession", e);
       session = null;
     }
 
@@ -165,27 +159,27 @@ export class Authentication {
       ...session,
     };
 
-    localStorage.setItem('token', JSON.stringify(this.authenticatedData));
+    localStorage.setItem("token", JSON.stringify(this.authenticatedData));
   };
 
   _getTenantApiHandler = async ({ tenantId }) => {
-    console.log('_getTenantApiHandler called');
+    console.log("_getTenantApiHandler called");
     const result = await fetch(`${CONSTANTS.ADMIN_API_URL}/office/aws`, {
-      method: 'GET',
+      method: "GET",
       headers: {
-        'x-custom-tenant-id': tenantId,
+        "x-custom-tenant-id": tenantId,
         Authorization: `Bearer ${CONSTANTS.ENV}-${tenantId}-tenant`,
         AuthorizationType: AUTHORIZATION_TYPE.TENANT,
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
     }).then((r) => r.json());
 
     if (result.status === 403) {
-      console.log('_getTenantApiHandler error', result);
-      this.stores.notification.showError('Invalid office.');
+      console.log("_getTenantApiHandler error", result);
+      this.stores.notification.showError("Invalid office.");
       return null;
     } else {
-      console.log('_getTenantApiHandler', result);
+      console.log("_getTenantApiHandler", result);
       return result.data;
     }
   };

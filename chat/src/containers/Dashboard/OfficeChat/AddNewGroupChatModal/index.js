@@ -10,7 +10,7 @@ import {
 } from "@material-ui/core";
 import { PhotoCameraSharp } from "@material-ui/icons";
 import CloseIcon from "@material-ui/icons/Close";
-// import  UploadIcon  from 'assets/images/upload-file.svg';
+import UploadIcon from "assets/images/upload-file.svg";
 import { useAuthToken } from "hooks/useAuthToken";
 import { useStores } from "hooks/useStores";
 import { getGroupNewAvatar } from "helpers/getGroupNewAvatar";
@@ -41,11 +41,11 @@ export const UploadPhoto = ({
           className={styles.uploadInput}
           accept=".jpg, .jpeg, .png, .svg"
         />
-        {/* <UploadIcon
+        <UploadIcon
           fill="#9A9A9A"
-          style={{ cursor: 'pointer' }}
+          style={{ cursor: "pointer" }}
           onClick={handleClick}
-        /> */}
+        />
         <span>{groupAvatar ? groupAvatar.name : "Upload Photo"}</span>
       </label>
     </div>

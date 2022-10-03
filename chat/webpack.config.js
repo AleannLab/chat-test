@@ -72,7 +72,11 @@ module.exports = (webpackConfigEnv, argv) => {
             test: /\.svg$/,
             issuer: /\.[jt]sx?$/,
             use: ['@svgr/webpack', 'url-loader'],
-          }
+          },
+          {
+            test: /\.(png|jpe?g|gif|wav)$/i,
+            use: ['file-loader'],
+          },
         ],
       },
     }

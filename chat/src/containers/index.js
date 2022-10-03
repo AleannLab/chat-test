@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from 'react';
-import { Route, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
 import { useStores } from 'hooks/useStores';
 import { observer } from 'mobx-react';
 import Loader from 'components/Core/Loader';
@@ -19,10 +19,12 @@ const Routes = observer((props) => {
     return loaderHtml;
   } else {
     return (
+      <Router>
         <Suspense fallback={loaderHtml}>
           <Route exact path="/login" component={Login} />
           <PrivateRoute path="/" component={Dashboard} />
         </Suspense>
+      </Router>
     );
   }
 });

@@ -1,10 +1,11 @@
 import Resource from "./utils/resource";
-import "chatkitty";
+// import ChatKitty from "@chatkitty/core";
+import ChatKitty from "chatkitty";
 import { ChatKitty as ChatKittySdk } from "chatkitty-platform-sdk";
-import "@chatkitty/core";
 import { cloneDeep } from "lodash";
 import CONSTANTS from "../helpers/constants";
 import { serializeToQueryString } from "helpers/misc";
+
 
 const MESSAGE_PAGE_SIZE = 50;
 
@@ -17,7 +18,6 @@ const MessageDraftType = {
  * these information will be saved on the database when create a new tenant and update for old tenant
  * the sdk call will also be move to backend as new API for office chat
  */
-
 export class KittyOfficeChat extends Resource {
   constructor(store) {
     super(store);
@@ -506,11 +506,11 @@ export class KittyOfficeChat extends Resource {
     if (!channel) {
       return;
     }
-    // if (isDirectChannel(channel) && channel.members.length === 2) {
-    //   return channel.members
-    //     .filter((member) => member.id !== this.user.id)
-    //     .map((member) => member.displayPictureUrl)[0];
-    // }
+    if (isDirectChannel(channel) && channel.members.length === 2) {
+      return channel.members
+        .filter((member) => member.id !== this.user.id)
+        .map((member) => member.displayPictureUrl)[0];
+    }
 
     return null;
   }

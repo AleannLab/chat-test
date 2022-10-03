@@ -92,7 +92,6 @@ const Dashboard = observer(() => {
   );
 
   // React query to fetch user permission by user id [for Tasks]
-  const userPermissionsQuery = usePermissions();
 
   return (
     <DashboardLayout>

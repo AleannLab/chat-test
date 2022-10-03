@@ -1,6 +1,6 @@
 import React from "react";
 import clsx from "clsx";
-// import  PinnedIcon  from 'assets/images/pin.svg';
+import PinnedIcon from "assets/images/pin.svg";
 import { useOfficeChatDispatch } from "hooks/useOfficeChatDispatch";
 import { Channel } from "../Channel";
 import styles from "./index.module.css";
@@ -38,7 +38,9 @@ const CardChannel = ({
         className={styles.cardName}
       />
       {pinned?.includes(email) && (
-        <div className={styles.pin}>{/* <PinnedIcon /> */}</div>
+        <div className={styles.pin}>
+          <PinnedIcon />
+        </div>
       )}
     </div>
   );
